@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="44e41262-a1e5-4db8-859c-ff30e8c12a56" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/design/frontend/medgento/default/template/page/html/header.phtml" afterPath="$PROJECT_DIR$/app/design/frontend/medgento/default/template/page/html/header.phtml" />
-    </list>
+    <list default="true" id="44e41262-a1e5-4db8-859c-ff30e8c12a56" name="Default" comment="" />
     <ignored path="repositorio.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -422,12 +418,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1467137313853</updated>
-      <workItem from="1467137315154" duration="954000" />
+      <workItem from="1467137315154" duration="1061000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="954000" />
+    <option name="totallyTimeSpent" value="1061000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="3" y="27" width="1260" height="734" extended-state="0" />
