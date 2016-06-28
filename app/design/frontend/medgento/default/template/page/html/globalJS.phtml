@@ -1,0 +1,104 @@
+<?php
+/*
+* Base Theme Template
+*/
+?>
+<!--COMPILE LESS ON THE FLY-->
+<script src="<?php echo $this->getSkinUrl('js/less-1.5.0.min.js')?>" type="text/javascript"></script>
+<script type="text/javascript">
+
+/*Bootsrap compatibility with Magento Messages*/
+jQuery('.success-msg').parent().addClass('alert-success');
+jQuery('.note-msg, .notice-msg').parent().addClass('alert-warning');
+jQuery('.error-msg').parent().addClass('alert-danger');
+jQuery('.messages').wrap('<div class="messages-wrapper"></div>');
+
+/*Blocks Styling starts*/
+
+jQuery('.product-details .btn-remove').html("<span class=\"glyphicon glyphicon-remove\"></span>");
+jQuery('.product-details .btn-edit').html("<span class=\"glyphicon glyphicon-edit\"></span>");
+/*Block Styling ends*/
+
+/*Product Detail page*/
+
+jQuery('#product-attribute-specs-table').wrap('<div class="panel-body"></div>');
+/*ends*/
+/*Wrap cart inside a div*/
+jQuery('.cart > form').wrap('<div class="shopping-cart-table-wrap"></div>');
+
+
+//Apply width if link-wishlist is in 4th td
+if(jQuery('.cart table tbody td:nth-child(4)').children().hasClass('link-wishlist')){
+	jQuery('.cart table tbody td:nth-child(2)').width('40%');
+	jQuery('.cart table tbody td:nth-child(4)').width('11%');
+	jQuery('.cart table tbody td .qty').width('50px');//QTY
+}else{
+	jQuery('.cart table tbody td:nth-child(2)').width('50%');
+	jQuery('.cart table tbody td .qty').width('50px');//QTY
+}
+
+/*Cart item remove button*/
+
+jQuery('.cart .btn-remove').html("<span class=\"glyphicon glyphicon-remove\"></span>");
+
+/*Crosssell container */
+jQuery('.cart-collaterals').wrap('<div class="cart-collaterals-wrapper"></div>');
+jQuery('.cart .col2-set').wrap('<div class="cart-collaterals-wrapper-inner"></div>');
+jQuery('.product-view .product-essential').wrap('<div class="product-essential-wrapper"></div>');
+jQuery('.cart #crosssell-products-list').wrap('<div class="crosssell-products-list-wrapper"></div>');
+
+/*Checkout page opc-checkout*/
+jQuery('.opc .section').wrapInner('<div class="opc-step-wrapper"></div>');
+jQuery('#checkout-step-login').wrapInner('<div class="opc-step-wrapper-inner"></div>');
+//jQuery('#checkout-step-login .col2-set').wrapInner('<div class="opc-step-col2set-wrapper-inner"></div>');
+jQuery('#checkout-step-login .messages-wrapper').wrap('<div class="row"></div>');
+
+/*Account Registration page*/
+jQuery('.account-create form').wrapInner('<div class="account-login-wrapper"></div>');
+jQuery('.account-login form').wrapInner('<div class="account-login-wrapper"></div>');
+
+/*Account Dashboard page*/
+jQuery('.col2-set > .box').wrap('<div class="box-wrapper"></div>');
+jQuery('.my-account .addresses-list').wrap('<div class="addresses-list-wrapper"></div>');
+jQuery('.addresses-list .addresses-primary, .addresses-list .addresses-additional ').wrapInner('<div class="address-list-panel"></div>');
+jQuery('.sales-order-history .data-table').wrap('<div class="panel panel-default"><div class="panel-body"></div></div>');
+jQuery('.my-account .order-info').addClass('dl-horizontal').wrap('<div class="order-info-wrapper"></div>');
+jQuery('.my-account .order-items').wrap('<div class="order-items-wrapper"></div>');
+if(!jQuery('body').hasClass('sales-order-history')){
+	jQuery('.my-account .data-table').wrap('<div class="panel-body"></div>');
+}
+
+jQuery('.newsletter-manage-index .buttons-set').wrapInner('<div class="button-set-wrapper"></div>');
+
+jQuery('.my-account .data-table tbody td:nth-child(3)').width('30%');
+jQuery('.my-account .box-recent').wrapInner('<div class="panel panel-default"></div>');
+jQuery('.my-account .welcome-msg').wrapInner('<div class="panel panel-default"><div class="panel-body"></div></div>');
+jQuery('.my-account form .fieldset').wrapInner('<div class="panel panel-default"><div class="panel-body"></div></div>');
+
+/*Forgot password page*/
+jQuery('.customer-account-forgotpassword .fieldset').wrapInner('<div class="panel panel-default"><div class="panel-body"></div></div>');
+
+/*Work around to show the set password form in My account section*/
+jQuery('#change_password').click(function () {
+    jQuery("#form-validate .fieldset:nth-child(2)").toggle(this.checked);
+});
+/*Ends*/
+
+//My order history page
+//My Downloadable Products
+jQuery('#my-downloadable-products-table').wrap('<div class="panel panel-default"><div class="panel-body"></div></div>');
+
+/*My Tags*/
+jQuery('.tag-customer-index .my-account').wrapInner('<div class="my-tags-wrapper"><div class="my-tags-inner"></div></div>');
+
+/*Make cart table responsive*/
+jQuery('#shopping-cart-table').parent().wrap('<div class="table-responsive"></div>');//wrap fieldset in table-responsive, instead of the table
+jQuery('#my-orders-table').wrap('<div class="table-responsive"></div>');
+jQuery('#my-downloadable-products-table').wrap('<div class="table-responsive"></div>');
+/*Make Checkout Review Table Responsive*/
+
+
+</script>
+
+
+

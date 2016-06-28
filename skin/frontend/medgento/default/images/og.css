@@ -1,0 +1,60 @@
+/* OG MEDGENTO */
+@media (max-width: 990px) {
+.quick-access { max-width: 40%; } 
+}
+
+
+body { background: #FFF !important; }
+
+.cms-home .container { background: url('../images/sunset-construction-site.jpg') no-repeat; }
+
+.header-row {
+    position: fixed;
+    margin: 0 auto;
+    z-index: 99999;
+    left: 0;
+    right: 0;
+}
+a { color: #f7941e; } 
+a.enlaces_home { color: #6d6e71 !important; } 
+
+
+.logo { margin-top: 10px !important; float: left; max-height: 50px;  }
+.logo img { float: left; max-height: 50px; float: left; padding-bottom: 10px; }
+
+.cms-home .quick-access { display: none !important;  }
+.cms-home .form-search {
+    max-width: 700px;
+    margin: 0 auto;
+}
+.quick-access { max-width: 60%; margin: 10px 20px; padding: 0 20px; float: left;
+}
+
+#menu_superior {  margin: 20px 0px; float: right; }
+#menu_superior a {  margin:0 2px; font-size: 12px; color:#FFF;}
+
+.foooter {  background: #4b4b4b; width: 100% !important; }
+.footer p, .footer p a { text-align: center !important; width: 100% !important; color:#FFF !important;  }
+.footer p { margin: 0 auto !important; display: block !important; }
+.footer { margin: 0 auto !important;  float: none !important; } 
+
+.foooter ul { margin: 20px auto !important; display: block !important; width: auto !important; }
+
+.header-row { background:#4b4b4b !important;  }
+
+
+.footer-container { border-top: none !important;  }
+
+.col-main .products-grid .item .caption .price-box { height: auto !important; margin-bottom: 0 !important; }
+
+.stock-label { color: #f0ad4e !important; clear: both; font-weight: bold; } 
+
+.btn-cart { background-color: #f7941e !important; border-color: #fe8a00 !important; }
+
+.main-container { margin-top: 50px; } 
+
+.frase-header { font-size: 14px; color:#FFF; float: left;
+    font-style: italic;
+    margin-top: 15px; } 
+
+.sidebar img { max-width: 100%;  } 

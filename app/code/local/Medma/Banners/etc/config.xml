@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<Medma_Banners>
+			<version>1.0.0</version>
+		</Medma_Banners>
+	</modules>
+	<global>
+		<blocks>
+			<banners>
+				<class>Medma_Banners_Block</class>
+			</banners>
+		</blocks>
+	</global>
+</config>

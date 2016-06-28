@@ -1,0 +1,12 @@
+/* CUSTOM CSS */
+
+.cms-home .quick-access { clear: both;
+    margin: 0px auto;
+    padding-top: 50px;
+    padding-bottom: 0;
+    float: none !important;
+}
+
+.cms-home .logo { float: none !important;
+    width: 100% !important;
+    text-align: center; } 

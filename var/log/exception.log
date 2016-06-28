@@ -1,0 +1,727 @@
+2016-01-06T19:58:09+00:00 ERR (3): 
+exception 'Zend_Mail_Transport_Exception' with message 'Unable to send mail. ' in /home/outle19r/public_html/zupply.me/lib/Zend/Mail/Transport/Sendmail.php:137
+Stack trace:
+#0 /home/outle19r/public_html/zupply.me/lib/Zend/Mail/Transport/Abstract.php(348): Zend_Mail_Transport_Sendmail->_sendMail()
+#1 /home/outle19r/public_html/zupply.me/lib/Zend/Mail.php(1194): Zend_Mail_Transport_Abstract->send(Object(Zend_Mail))
+#2 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Email/Template.php(451): Zend_Mail->send()
+#3 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Email/Template.php(508): Mage_Core_Model_Email_Template->send(Array, Array, Array)
+#4 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Email/Template/Mailer.php(84): Mage_Core_Model_Email_Template->sendTransactional('ced_vproducts_g...', 'general', Array, Array, Array, '1')
+#5 /home/outle19r/public_html/zupply.me/app/code/local/Ced/CsMarketplace/Helper/Mail.php(256): Mage_Core_Model_Email_Template_Mailer->send()
+#6 /home/outle19r/public_html/zupply.me/app/code/local/Ced/CsMarketplace/Helper/Mail.php(229): Ced_CsMarketplace_Helper_Mail->_sendEmailTemplate('ced_vproducts/g...', 'ced_vproducts/g...', Array, '1')
+#7 /home/outle19r/public_html/zupply.me/app/code/local/Ced/CsMarketplace/Model/Vproducts.php(453): Ced_CsMarketplace_Helper_Mail->sendProductNotificationEmail(Array, '1')
+#8 /home/outle19r/public_html/zupply.me/app/code/local/Ced/CsMarketplace/controllers/Adminhtml/VproductsController.php(114): Ced_CsMarketplace_Model_Vproducts->changeVproductStatus(Array, '1')
+#9 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Action.php(418): Ced_CsMarketplace_Adminhtml_VproductsController->changeStatusAction()
+#10 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Router/Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('changeStatus')
+#11 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#12 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#13 /home/outle19r/public_html/zupply.me/app/Mage.php(684): Mage_Core_Model_App->run(Array)
+#14 /home/outle19r/public_html/zupply.me/index.php(83): Mage::run('', 'store')
+#15 {main}
+2016-01-12T19:31:06+00:00 ERR (3): 
+exception 'Zend_Mail_Transport_Exception' with message 'Unable to send mail. ' in /home/outle19r/public_html/zupply.me/lib/Zend/Mail/Transport/Sendmail.php:137
+Stack trace:
+#0 /home/outle19r/public_html/zupply.me/lib/Zend/Mail/Transport/Abstract.php(348): Zend_Mail_Transport_Sendmail->_sendMail()
+#1 /home/outle19r/public_html/zupply.me/lib/Zend/Mail.php(1194): Zend_Mail_Transport_Abstract->send(Object(Zend_Mail))
+#2 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Email/Template.php(451): Zend_Mail->send()
+#3 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Email/Template.php(508): Mage_Core_Model_Email_Template->send(Array, Array, Array)
+#4 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Email/Template/Mailer.php(84): Mage_Core_Model_Email_Template->sendTransactional('ced_vproducts_g...', 'general', Array, Array, Array, '1')
+#5 /home/outle19r/public_html/zupply.me/app/code/local/Ced/CsMarketplace/Helper/Mail.php(256): Mage_Core_Model_Email_Template_Mailer->send()
+#6 /home/outle19r/public_html/zupply.me/app/code/local/Ced/CsMarketplace/Helper/Mail.php(229): Ced_CsMarketplace_Helper_Mail->_sendEmailTemplate('ced_vproducts/g...', 'ced_vproducts/g...', Array, '1')
+#7 /home/outle19r/public_html/zupply.me/app/code/local/Ced/CsMarketplace/Model/Vproducts.php(453): Ced_CsMarketplace_Helper_Mail->sendProductNotificationEmail(Array, 3)
+#8 /home/outle19r/public_html/zupply.me/app/code/local/Ced/CsMarketplace/Model/Observer.php(416): Ced_CsMarketplace_Model_Vproducts->changeVproductStatus(Array, 3)
+#9 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/App.php(1357): Ced_CsMarketplace_Model_Observer->deleteMassVproductData(Object(Varien_Event_Observer))
+#10 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/App.php(1336): Mage_Core_Model_App->_callObserverMethod(Object(Ced_CsMarketplace_Model_Observer), 'deleteMassVprod...', Object(Varien_Event_Observer))
+#11 /home/outle19r/public_html/zupply.me/app/Mage.php(448): Mage_Core_Model_App->dispatchEvent('controller_acti...', Array)
+#12 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Action.php(546): Mage::dispatchEvent('controller_acti...', Array)
+#13 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Action.php(422): Mage_Core_Controller_Varien_Action->postDispatch()
+#14 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Router/Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('massDelete')
+#15 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#16 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#17 /home/outle19r/public_html/zupply.me/app/Mage.php(684): Mage_Core_Model_App->run(Array)
+#18 /home/outle19r/public_html/zupply.me/index.php(83): Mage::run('', 'store')
+#19 {main}
+2016-01-12T19:35:59+00:00 ERR (3): 
+exception 'Zend_Mail_Transport_Exception' with message 'Unable to send mail. ' in /home/outle19r/public_html/zupply.me/lib/Zend/Mail/Transport/Sendmail.php:137
+Stack trace:
+#0 /home/outle19r/public_html/zupply.me/lib/Zend/Mail/Transport/Abstract.php(348): Zend_Mail_Transport_Sendmail->_sendMail()
+#1 /home/outle19r/public_html/zupply.me/lib/Zend/Mail.php(1194): Zend_Mail_Transport_Abstract->send(Object(Zend_Mail))
+#2 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Email/Template.php(451): Zend_Mail->send()
+#3 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Email/Template.php(508): Mage_Core_Model_Email_Template->send('dani@garage.com', NULL, Array)
+#4 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Newsletter/Model/Subscriber.php(559): Mage_Core_Model_Email_Template->sendTransactional('newsletter_subs...', 'general', 'dani@garage.com', NULL, Array)
+#5 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Newsletter/Model/Subscriber.php(458): Mage_Newsletter_Model_Subscriber->sendConfirmationSuccessEmail()
+#6 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Newsletter/Model/Observer.php(38): Mage_Newsletter_Model_Subscriber->subscribeCustomer(Object(Mage_Customer_Model_Customer))
+#7 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/App.php(1357): Mage_Newsletter_Model_Observer->subscribeCustomer(Object(Varien_Event_Observer))
+#8 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/App.php(1336): Mage_Core_Model_App->_callObserverMethod(Object(Mage_Newsletter_Model_Observer), 'subscribeCustom...', Object(Varien_Event_Observer))
+#9 /home/outle19r/public_html/zupply.me/app/Mage.php(448): Mage_Core_Model_App->dispatchEvent('customer_save_a...', Array)
+#10 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Abstract.php(466): Mage::dispatchEvent('customer_save_a...', Array)
+#11 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Abstract.php(319): Mage_Core_Model_Abstract->_afterSave()
+#12 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Customer/controllers/AccountController.php(301): Mage_Core_Model_Abstract->save()
+#13 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Action.php(418): Mage_Customer_AccountController->createPostAction()
+#14 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Router/Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('createpost')
+#15 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#16 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#17 /home/outle19r/public_html/zupply.me/app/Mage.php(684): Mage_Core_Model_App->run(Array)
+#18 /home/outle19r/public_html/zupply.me/index.php(83): Mage::run('', 'store')
+#19 {main}
+2016-01-12T19:35:59+00:00 ERR (3): 
+exception 'Zend_Mail_Transport_Exception' with message 'Unable to send mail. ' in /home/outle19r/public_html/zupply.me/lib/Zend/Mail/Transport/Sendmail.php:137
+Stack trace:
+#0 /home/outle19r/public_html/zupply.me/lib/Zend/Mail/Transport/Abstract.php(348): Zend_Mail_Transport_Sendmail->_sendMail()
+#1 /home/outle19r/public_html/zupply.me/lib/Zend/Mail.php(1194): Zend_Mail_Transport_Abstract->send(Object(Zend_Mail))
+#2 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Email/Template.php(451): Zend_Mail->send()
+#3 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Email/Template.php(508): Mage_Core_Model_Email_Template->send(Array, Array, Array)
+#4 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Email/Template/Mailer.php(84): Mage_Core_Model_Email_Template->sendTransactional('customer_create...', 'general', Array, Array, Array, '1')
+#5 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Customer/Model/Customer.php(680): Mage_Core_Model_Email_Template_Mailer->send()
+#6 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Customer/Model/Customer.php(607): Mage_Customer_Model_Customer->_sendEmailTemplate('customer/create...', 'customer/create...', Array, '1')
+#7 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Customer/controllers/AccountController.php(575): Mage_Customer_Model_Customer->sendNewAccountEmail('registered', '', '1')
+#8 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Customer/controllers/AccountController.php(350): Mage_Customer_AccountController->_welcomeCustomer(Object(Mage_Customer_Model_Customer))
+#9 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Customer/controllers/AccountController.php(303): Mage_Customer_AccountController->_successProcessRegistration(Object(Mage_Customer_Model_Customer))
+#10 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Action.php(418): Mage_Customer_AccountController->createPostAction()
+#11 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Router/Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('createpost')
+#12 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#13 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#14 /home/outle19r/public_html/zupply.me/app/Mage.php(684): Mage_Core_Model_App->run(Array)
+#15 /home/outle19r/public_html/zupply.me/index.php(83): Mage::run('', 'store')
+#16 {main}
+2016-01-12T19:37:56+00:00 ERR (3): 
+exception 'Zend_Mail_Transport_Exception' with message 'Unable to send mail. ' in /home/outle19r/public_html/zupply.me/lib/Zend/Mail/Transport/Sendmail.php:137
+Stack trace:
+#0 /home/outle19r/public_html/zupply.me/lib/Zend/Mail/Transport/Abstract.php(348): Zend_Mail_Transport_Sendmail->_sendMail()
+#1 /home/outle19r/public_html/zupply.me/lib/Zend/Mail.php(1194): Zend_Mail_Transport_Abstract->send(Object(Zend_Mail))
+#2 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Email/Template.php(451): Zend_Mail->send()
+#3 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Email/Template.php(508): Mage_Core_Model_Email_Template->send(Array, Array, Array)
+#4 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Email/Template/Mailer.php(84): Mage_Core_Model_Email_Template->sendTransactional('customer_create...', 'general', Array, Array, Array, '1')
+#5 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Customer/Model/Customer.php(680): Mage_Core_Model_Email_Template_Mailer->send()
+#6 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Customer/Model/Customer.php(607): Mage_Customer_Model_Customer->_sendEmailTemplate('customer/create...', 'customer/create...', Array, '1')
+#7 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Customer/controllers/AccountController.php(575): Mage_Customer_Model_Customer->sendNewAccountEmail('registered', '', '1')
+#8 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Customer/controllers/AccountController.php(350): Mage_Customer_AccountController->_welcomeCustomer(Object(Mage_Customer_Model_Customer))
+#9 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Customer/controllers/AccountController.php(303): Mage_Customer_AccountController->_successProcessRegistration(Object(Mage_Customer_Model_Customer))
+#10 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Action.php(418): Mage_Customer_AccountController->createPostAction()
+#11 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Router/Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('createpost')
+#12 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#13 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#14 /home/outle19r/public_html/zupply.me/app/Mage.php(684): Mage_Core_Model_App->run(Array)
+#15 /home/outle19r/public_html/zupply.me/index.php(83): Mage::run('', 'store')
+#16 {main}
+2016-01-12T19:51:07+00:00 ERR (3): 
+exception 'Zend_Mail_Transport_Exception' with message 'Unable to send mail. ' in /home/outle19r/public_html/zupply.me/lib/Zend/Mail/Transport/Sendmail.php:137
+Stack trace:
+#0 /home/outle19r/public_html/zupply.me/lib/Zend/Mail/Transport/Abstract.php(348): Zend_Mail_Transport_Sendmail->_sendMail()
+#1 /home/outle19r/public_html/zupply.me/lib/Zend/Mail.php(1194): Zend_Mail_Transport_Abstract->send(Object(Zend_Mail))
+#2 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Email/Template.php(451): Zend_Mail->send()
+#3 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Email/Template.php(508): Mage_Core_Model_Email_Template->send('danielserranodi...', NULL, Array)
+#4 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Newsletter/Model/Subscriber.php(559): Mage_Core_Model_Email_Template->sendTransactional('newsletter_subs...', 'general', 'danielserranodi...', NULL, Array)
+#5 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Newsletter/Model/Subscriber.php(458): Mage_Newsletter_Model_Subscriber->sendConfirmationSuccessEmail()
+#6 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Newsletter/Model/Observer.php(38): Mage_Newsletter_Model_Subscriber->subscribeCustomer(Object(Mage_Customer_Model_Customer))
+#7 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/App.php(1357): Mage_Newsletter_Model_Observer->subscribeCustomer(Object(Varien_Event_Observer))
+#8 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/App.php(1336): Mage_Core_Model_App->_callObserverMethod(Object(Mage_Newsletter_Model_Observer), 'subscribeCustom...', Object(Varien_Event_Observer))
+#9 /home/outle19r/public_html/zupply.me/app/Mage.php(448): Mage_Core_Model_App->dispatchEvent('customer_save_a...', Array)
+#10 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Abstract.php(466): Mage::dispatchEvent('customer_save_a...', Array)
+#11 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Abstract.php(319): Mage_Core_Model_Abstract->_afterSave()
+#12 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Newsletter/controllers/ManageController.php(72): Mage_Core_Model_Abstract->save()
+#13 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Action.php(418): Mage_Newsletter_ManageController->saveAction()
+#14 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Router/Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('save')
+#15 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#16 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#17 /home/outle19r/public_html/zupply.me/app/Mage.php(684): Mage_Core_Model_App->run(Array)
+#18 /home/outle19r/public_html/zupply.me/index.php(83): Mage::run('', 'store')
+#19 {main}
+2016-01-12T20:11:25+00:00 ERR (3): 
+exception 'Zend_Mail_Transport_Exception' with message 'Unable to send mail. ' in /home/outle19r/public_html/zupply.me/lib/Zend/Mail/Transport/Sendmail.php:137
+Stack trace:
+#0 /home/outle19r/public_html/zupply.me/lib/Zend/Mail/Transport/Abstract.php(348): Zend_Mail_Transport_Sendmail->_sendMail()
+#1 /home/outle19r/public_html/zupply.me/lib/Zend/Mail.php(1194): Zend_Mail_Transport_Abstract->send(Object(Zend_Mail))
+#2 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Email/Template.php(451): Zend_Mail->send()
+#3 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Email/Template.php(508): Mage_Core_Model_Email_Template->send(Array, Array, Array)
+#4 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Email/Template/Mailer.php(84): Mage_Core_Model_Email_Template->sendTransactional('ced_vproducts_g...', 'general', Array, Array, Array, '1')
+#5 /home/outle19r/public_html/zupply.me/app/code/local/Ced/CsMarketplace/Helper/Mail.php(256): Mage_Core_Model_Email_Template_Mailer->send()
+#6 /home/outle19r/public_html/zupply.me/app/code/local/Ced/CsMarketplace/Helper/Mail.php(229): Ced_CsMarketplace_Helper_Mail->_sendEmailTemplate('ced_vproducts/g...', 'ced_vproducts/g...', Array, '1')
+#7 /home/outle19r/public_html/zupply.me/app/code/local/Ced/CsMarketplace/Model/Vproducts.php(453): Ced_CsMarketplace_Helper_Mail->sendProductNotificationEmail(Array, '1')
+#8 /home/outle19r/public_html/zupply.me/app/code/local/Ced/CsMarketplace/controllers/Adminhtml/VproductsController.php(114): Ced_CsMarketplace_Model_Vproducts->changeVproductStatus(Array, '1')
+#9 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Action.php(418): Ced_CsMarketplace_Adminhtml_VproductsController->changeStatusAction()
+#10 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Router/Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('changeStatus')
+#11 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#12 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#13 /home/outle19r/public_html/zupply.me/app/Mage.php(684): Mage_Core_Model_App->run(Array)
+#14 /home/outle19r/public_html/zupply.me/index.php(83): Mage::run('', 'store')
+#15 {main}
+2016-01-12T20:19:20+00:00 ERR (3): 
+exception 'Zend_Mail_Transport_Exception' with message 'Unable to send mail. ' in /home/outle19r/public_html/zupply.me/lib/Zend/Mail/Transport/Sendmail.php:137
+Stack trace:
+#0 /home/outle19r/public_html/zupply.me/lib/Zend/Mail/Transport/Abstract.php(348): Zend_Mail_Transport_Sendmail->_sendMail()
+#1 /home/outle19r/public_html/zupply.me/lib/Zend/Mail.php(1194): Zend_Mail_Transport_Abstract->send(Object(Zend_Mail))
+#2 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Email/Template.php(451): Zend_Mail->send()
+#3 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Email/Template.php(508): Mage_Core_Model_Email_Template->send(Array, Array, Array)
+#4 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Email/Template/Mailer.php(84): Mage_Core_Model_Email_Template->sendTransactional('ced_csmarketpla...', 'general', Array, Array, Array, '1')
+#5 /home/outle19r/public_html/zupply.me/app/code/local/Ced/CsMarketplace/Helper/Mail.php(256): Mage_Core_Model_Email_Template_Mailer->send()
+#6 /home/outle19r/public_html/zupply.me/app/code/local/Ced/CsMarketplace/Helper/Mail.php(84): Ced_CsMarketplace_Helper_Mail->_sendEmailTemplate('ced_csmarketpla...', 'ced_csmarketpla...', Array, '1')
+#7 /home/outle19r/public_html/zupply.me/app/code/local/Ced/CsMarketplace/Model/Vendor.php(267): Ced_CsMarketplace_Helper_Mail->sendAccountEmail('approved', '', Object(Ced_CsMarketplace_Model_Vendor))
+#8 /home/outle19r/public_html/zupply.me/app/code/local/Ced/CsMarketplace/controllers/Adminhtml/VendorController.php(216): Ced_CsMarketplace_Model_Vendor->saveMassAttribute(Array, Array)
+#9 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Action.php(418): Ced_CsMarketplace_Adminhtml_VendorController->massStatusAction()
+#10 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Router/Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('massStatus')
+#11 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#12 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#13 /home/outle19r/public_html/zupply.me/app/Mage.php(684): Mage_Core_Model_App->run(Array)
+#14 /home/outle19r/public_html/zupply.me/index.php(83): Mage::run('', 'store')
+#15 {main}
+2016-02-08T17:42:55+00:00 ERR (3): 
+exception 'Mage_Core_Exception' with message 'PayPal NVP gateway errors: The field Shipping Address Postal Code is required (#10730: Shipping Address Postal Code Empty). Correlation ID: 8dd6a4fd8624d. Version: 72.0.' in /home/outle19r/public_html/zupply.me/app/code/core/Mage/Paypal/Model/Api/Nvp.php:1062
+Stack trace:
+#0 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Paypal/Model/Api/Nvp.php(1008): Mage_Paypal_Model_Api_Nvp->_handleCallErrors(Array)
+#1 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Paypal/Model/Api/Nvp.php(616): Mage_Paypal_Model_Api_Nvp->call('SetExpressCheck...', Array)
+#2 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Paypal/Model/Express/Checkout.php(381): Mage_Paypal_Model_Api_Nvp->callSetExpressCheckout()
+#3 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Paypal/Controller/Express/Abstract.php(108): Mage_Paypal_Model_Express_Checkout->start('http://zupply.m...', 'http://zupply.m...', true)
+#4 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Action.php(418): Mage_Paypal_Controller_Express_Abstract->startAction()
+#5 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Router/Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('start')
+#6 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#7 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#8 /home/outle19r/public_html/zupply.me/app/Mage.php(684): Mage_Core_Model_App->run(Array)
+#9 /home/outle19r/public_html/zupply.me/index.php(84): Mage::run('', 'store')
+#10 {main}
+2016-02-08T17:59:51+00:00 ERR (3): 
+exception 'Mage_Core_Exception' with message 'PayPal NVP gateway errors: The field Shipping Address Postal Code is required (#10730: Shipping Address Postal Code Empty). Correlation ID: 76935920c536e. Version: 72.0.' in /home/outle19r/public_html/zupply.me/app/code/core/Mage/Paypal/Model/Api/Nvp.php:1062
+Stack trace:
+#0 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Paypal/Model/Api/Nvp.php(1008): Mage_Paypal_Model_Api_Nvp->_handleCallErrors(Array)
+#1 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Paypal/Model/Api/Nvp.php(616): Mage_Paypal_Model_Api_Nvp->call('SetExpressCheck...', Array)
+#2 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Paypal/Model/Express/Checkout.php(381): Mage_Paypal_Model_Api_Nvp->callSetExpressCheckout()
+#3 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Paypal/Controller/Express/Abstract.php(108): Mage_Paypal_Model_Express_Checkout->start('http://zupply.m...', 'http://zupply.m...', true)
+#4 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Action.php(418): Mage_Paypal_Controller_Express_Abstract->startAction()
+#5 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Router/Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('start')
+#6 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#7 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#8 /home/outle19r/public_html/zupply.me/app/Mage.php(684): Mage_Core_Model_App->run(Array)
+#9 /home/outle19r/public_html/zupply.me/index.php(84): Mage::run('', 'store')
+#10 {main}
+2016-02-08T18:02:12+00:00 ERR (3): 
+exception 'Mage_Core_Exception' with message 'PayPal NVP gateway errors: The field Shipping Address Postal Code is required (#10730: Shipping Address Postal Code Empty). Correlation ID: c4af336c623ef. Version: 72.0.' in /home/outle19r/public_html/zupply.me/app/code/core/Mage/Paypal/Model/Api/Nvp.php:1062
+Stack trace:
+#0 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Paypal/Model/Api/Nvp.php(1008): Mage_Paypal_Model_Api_Nvp->_handleCallErrors(Array)
+#1 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Paypal/Model/Api/Nvp.php(616): Mage_Paypal_Model_Api_Nvp->call('SetExpressCheck...', Array)
+#2 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Paypal/Model/Express/Checkout.php(381): Mage_Paypal_Model_Api_Nvp->callSetExpressCheckout()
+#3 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Paypal/Controller/Express/Abstract.php(108): Mage_Paypal_Model_Express_Checkout->start('http://zupply.m...', 'http://zupply.m...', true)
+#4 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Action.php(418): Mage_Paypal_Controller_Express_Abstract->startAction()
+#5 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Router/Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('start')
+#6 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#7 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#8 /home/outle19r/public_html/zupply.me/app/Mage.php(684): Mage_Core_Model_App->run(Array)
+#9 /home/outle19r/public_html/zupply.me/index.php(84): Mage::run('', 'store')
+#10 {main}
+2016-02-08T21:07:44+00:00 ERR (3): 
+exception 'Mage_Core_Exception' with message 'PayPal NVP gateway errors: The field Shipping Address Postal Code is required (#10730: Shipping Address Postal Code Empty). Correlation ID: 54b84f8eae990. Version: 72.0.' in /home/outle19r/public_html/zupply.me/app/code/core/Mage/Paypal/Model/Api/Nvp.php:1062
+Stack trace:
+#0 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Paypal/Model/Api/Nvp.php(1008): Mage_Paypal_Model_Api_Nvp->_handleCallErrors(Array)
+#1 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Paypal/Model/Api/Nvp.php(616): Mage_Paypal_Model_Api_Nvp->call('SetExpressCheck...', Array)
+#2 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Paypal/Model/Express/Checkout.php(381): Mage_Paypal_Model_Api_Nvp->callSetExpressCheckout()
+#3 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Paypal/Controller/Express/Abstract.php(108): Mage_Paypal_Model_Express_Checkout->start('http://zupply.m...', 'http://zupply.m...', false)
+#4 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Action.php(418): Mage_Paypal_Controller_Express_Abstract->startAction()
+#5 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Router/Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('start')
+#6 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#7 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#8 /home/outle19r/public_html/zupply.me/app/Mage.php(684): Mage_Core_Model_App->run(Array)
+#9 /home/outle19r/public_html/zupply.me/index.php(84): Mage::run('', 'store')
+#10 {main}
+2016-02-23T21:21:46+00:00 ERR (3): 
+exception 'Exception' with message 'Warning: include(Mage/Vendors/Model/Vendor.php): failed to open stream: No such file or directory  in /home/outle19r/public_html/zupply.me/lib/Varien/Autoload.php on line 94' in /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/functions.php:245
+Stack trace:
+#0 /home/outle19r/public_html/zupply.me/lib/Varien/Autoload.php(94): mageCoreErrorHandler(2, 'include(Mage/Ve...', '/home/outle19r/...', 94, Array)
+#1 /home/outle19r/public_html/zupply.me/lib/Varien/Autoload.php(94): Varien_Autoload::autoload()
+#2 [internal function]: Varien_Autoload->autoload('Mage_Vendors_Mo...')
+#3 [internal function]: spl_autoload_call('Mage_Vendors_Mo...')
+#4 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Config.php(1346): class_exists('Mage_Vendors_Mo...')
+#5 /home/outle19r/public_html/zupply.me/app/Mage.php(463): Mage_Core_Model_Config->getModelInstance('vendors/vendor', Array)
+#6 /home/outle19r/public_html/zupply.me/app/design/frontend/medgento/default/template/catalog/product/view.phtml(47): Mage::getModel('vendors/vendor')
+#7 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Block/Template.php(241): include('/home/outle19r/...')
+#8 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Block/Template.php(272): Mage_Core_Block_Template->fetchView('frontend/medgen...')
+#9 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Block/Template.php(286): Mage_Core_Block_Template->renderView()
+#10 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Block/Abstract.php(919): Mage_Core_Block_Template->_toHtml()
+#11 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Block/Text/List.php(43): Mage_Core_Block_Abstract->toHtml()
+#12 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Block/Abstract.php(919): Mage_Core_Block_Text_List->_toHtml()
+#13 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Block/Abstract.php(637): Mage_Core_Block_Abstract->toHtml()
+#14 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Block/Abstract.php(581): Mage_Core_Block_Abstract->_getChildHtml('content', true)
+#15 /home/outle19r/public_html/zupply.me/app/design/frontend/medgento/default/template/page/1column.phtml(50): Mage_Core_Block_Abstract->getChildHtml('content')
+#16 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Block/Template.php(241): include('/home/outle19r/...')
+#17 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Block/Template.php(272): Mage_Core_Block_Template->fetchView('frontend/medgen...')
+#18 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Block/Template.php(286): Mage_Core_Block_Template->renderView()
+#19 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Block/Abstract.php(919): Mage_Core_Block_Template->_toHtml()
+#20 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Layout.php(555): Mage_Core_Block_Abstract->toHtml()
+#21 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Action.php(390): Mage_Core_Model_Layout->getOutput()
+#22 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Catalog/Helper/Product/View.php(147): Mage_Core_Controller_Varien_Action->renderLayout()
+#23 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Catalog/controllers/ProductController.php(132): Mage_Catalog_Helper_Product_View->prepareAndRender(6, Object(Mage_Catalog_ProductController), Object(Varien_Object))
+#24 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Action.php(418): Mage_Catalog_ProductController->viewAction()
+#25 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Router/Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('view')
+#26 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#27 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#28 /home/outle19r/public_html/zupply.me/app/Mage.php(684): Mage_Core_Model_App->run(Array)
+#29 /home/outle19r/public_html/zupply.me/index.php(84): Mage::run('', 'store')
+#30 {main}
+2016-02-23T21:23:19+00:00 ERR (3): 
+exception 'Exception' with message 'Warning: include(Mage/Vendors/Model/Vendor.php): failed to open stream: No such file or directory  in /home/outle19r/public_html/zupply.me/lib/Varien/Autoload.php on line 94' in /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/functions.php:245
+Stack trace:
+#0 /home/outle19r/public_html/zupply.me/lib/Varien/Autoload.php(94): mageCoreErrorHandler(2, 'include(Mage/Ve...', '/home/outle19r/...', 94, Array)
+#1 /home/outle19r/public_html/zupply.me/lib/Varien/Autoload.php(94): Varien_Autoload::autoload()
+#2 [internal function]: Varien_Autoload->autoload('Mage_Vendors_Mo...')
+#3 [internal function]: spl_autoload_call('Mage_Vendors_Mo...')
+#4 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Config.php(1346): class_exists('Mage_Vendors_Mo...')
+#5 /home/outle19r/public_html/zupply.me/app/Mage.php(463): Mage_Core_Model_Config->getModelInstance('vendors/vendor', Array)
+#6 /home/outle19r/public_html/zupply.me/app/design/frontend/medgento/default/template/catalog/product/view.phtml(15): Mage::getModel('vendors/vendor')
+#7 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Block/Template.php(241): include('/home/outle19r/...')
+#8 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Block/Template.php(272): Mage_Core_Block_Template->fetchView('frontend/medgen...')
+#9 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Block/Template.php(286): Mage_Core_Block_Template->renderView()
+#10 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Block/Abstract.php(919): Mage_Core_Block_Template->_toHtml()
+#11 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Block/Text/List.php(43): Mage_Core_Block_Abstract->toHtml()
+#12 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Block/Abstract.php(919): Mage_Core_Block_Text_List->_toHtml()
+#13 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Block/Abstract.php(637): Mage_Core_Block_Abstract->toHtml()
+#14 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Block/Abstract.php(581): Mage_Core_Block_Abstract->_getChildHtml('content', true)
+#15 /home/outle19r/public_html/zupply.me/app/design/frontend/medgento/default/template/page/1column.phtml(50): Mage_Core_Block_Abstract->getChildHtml('content')
+#16 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Block/Template.php(241): include('/home/outle19r/...')
+#17 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Block/Template.php(272): Mage_Core_Block_Template->fetchView('frontend/medgen...')
+#18 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Block/Template.php(286): Mage_Core_Block_Template->renderView()
+#19 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Block/Abstract.php(919): Mage_Core_Block_Template->_toHtml()
+#20 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Layout.php(555): Mage_Core_Block_Abstract->toHtml()
+#21 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Action.php(390): Mage_Core_Model_Layout->getOutput()
+#22 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Catalog/Helper/Product/View.php(147): Mage_Core_Controller_Varien_Action->renderLayout()
+#23 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Catalog/controllers/ProductController.php(132): Mage_Catalog_Helper_Product_View->prepareAndRender(6, Object(Mage_Catalog_ProductController), Object(Varien_Object))
+#24 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Action.php(418): Mage_Catalog_ProductController->viewAction()
+#25 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Router/Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('view')
+#26 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#27 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#28 /home/outle19r/public_html/zupply.me/app/Mage.php(684): Mage_Core_Model_App->run(Array)
+#29 /home/outle19r/public_html/zupply.me/index.php(84): Mage::run('', 'store')
+#30 {main}
+2016-03-22T13:45:57+00:00 ERR (3): 
+exception 'Mage_Core_Exception' with message 'Invalid webservice adapter specified.' in /home/outle19r/public_html/zupply.me/app/Mage.php:595
+Stack trace:
+#0 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Api/Model/Server.php(127): Mage::throwException('Invalid webserv...')
+#1 /home/outle19r/public_html/zupply.me/api.php(84): Mage_Api_Model_Server->initialize(NULL)
+#2 {main}
+2016-03-22T14:14:12+00:00 ERR (3): 
+exception 'Mage_Core_Exception' with message 'Invalid webservice adapter specified.' in /home/outle19r/public_html/zupply.me/app/Mage.php:595
+Stack trace:
+#0 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Api/Model/Server.php(127): Mage::throwException('Invalid webserv...')
+#1 /home/outle19r/public_html/zupply.me/api.php(84): Mage_Api_Model_Server->initialize(NULL)
+#2 {main}
+2016-05-10T20:05:34+00:00 ERR (3): 
+exception 'Zend_Mail_Transport_Exception' with message 'Unable to send mail. ' in /home/outle19r/public_html/zupply.me/lib/Zend/Mail/Transport/Sendmail.php:137
+Stack trace:
+#0 /home/outle19r/public_html/zupply.me/lib/Zend/Mail/Transport/Abstract.php(348): Zend_Mail_Transport_Sendmail->_sendMail()
+#1 /home/outle19r/public_html/zupply.me/lib/Zend/Mail.php(1194): Zend_Mail_Transport_Abstract->send(Object(Zend_Mail))
+#2 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Email/Template.php(451): Zend_Mail->send()
+#3 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Email/Template.php(508): Mage_Core_Model_Email_Template->send(Array, Array, Array)
+#4 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Email/Template/Mailer.php(84): Mage_Core_Model_Email_Template->sendTransactional('customer_create...', 'general', Array, Array, Array, '1')
+#5 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Customer/Model/Customer.php(680): Mage_Core_Model_Email_Template_Mailer->send()
+#6 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Customer/Model/Customer.php(607): Mage_Customer_Model_Customer->_sendEmailTemplate('customer/create...', 'customer/create...', Array, '1')
+#7 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Customer/controllers/AccountController.php(575): Mage_Customer_Model_Customer->sendNewAccountEmail('registered', '', '1')
+#8 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Customer/controllers/AccountController.php(350): Mage_Customer_AccountController->_welcomeCustomer(Object(Mage_Customer_Model_Customer))
+#9 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Customer/controllers/AccountController.php(303): Mage_Customer_AccountController->_successProcessRegistration(Object(Mage_Customer_Model_Customer))
+#10 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Action.php(418): Mage_Customer_AccountController->createPostAction()
+#11 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Router/Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('createpost')
+#12 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#13 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#14 /home/outle19r/public_html/zupply.me/app/Mage.php(684): Mage_Core_Model_App->run(Array)
+#15 /home/outle19r/public_html/zupply.me/index.php(84): Mage::run('', 'store')
+#16 {main}
+2016-05-10T20:25:17+00:00 ERR (3): 
+exception 'Zend_Mail_Transport_Exception' with message 'Unable to send mail. ' in /home/outle19r/public_html/zupply.me/lib/Zend/Mail/Transport/Sendmail.php:137
+Stack trace:
+#0 /home/outle19r/public_html/zupply.me/lib/Zend/Mail/Transport/Abstract.php(348): Zend_Mail_Transport_Sendmail->_sendMail()
+#1 /home/outle19r/public_html/zupply.me/lib/Zend/Mail.php(1194): Zend_Mail_Transport_Abstract->send(Object(Zend_Mail))
+#2 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Email/Template.php(451): Zend_Mail->send()
+#3 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Email/Template.php(508): Mage_Core_Model_Email_Template->send(Array, Array, Array)
+#4 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Email/Template/Mailer.php(84): Mage_Core_Model_Email_Template->sendTransactional('customer_create...', 'general', Array, Array, Array, '1')
+#5 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Customer/Model/Customer.php(680): Mage_Core_Model_Email_Template_Mailer->send()
+#6 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Customer/Model/Customer.php(607): Mage_Customer_Model_Customer->_sendEmailTemplate('customer/create...', 'customer/create...', Array, '1')
+#7 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Customer/controllers/AccountController.php(575): Mage_Customer_Model_Customer->sendNewAccountEmail('registered', '', '1')
+#8 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Customer/controllers/AccountController.php(350): Mage_Customer_AccountController->_welcomeCustomer(Object(Mage_Customer_Model_Customer))
+#9 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Customer/controllers/AccountController.php(303): Mage_Customer_AccountController->_successProcessRegistration(Object(Mage_Customer_Model_Customer))
+#10 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Action.php(418): Mage_Customer_AccountController->createPostAction()
+#11 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Router/Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('createpost')
+#12 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#13 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#14 /home/outle19r/public_html/zupply.me/app/Mage.php(684): Mage_Core_Model_App->run(Array)
+#15 /home/outle19r/public_html/zupply.me/index.php(84): Mage::run('', 'store')
+#16 {main}
+2016-05-10T20:58:24+00:00 ERR (3): 
+exception 'Zend_Mail_Transport_Exception' with message 'Unable to send mail. ' in /home/outle19r/public_html/zupply.me/lib/Zend/Mail/Transport/Sendmail.php:137
+Stack trace:
+#0 /home/outle19r/public_html/zupply.me/lib/Zend/Mail/Transport/Abstract.php(348): Zend_Mail_Transport_Sendmail->_sendMail()
+#1 /home/outle19r/public_html/zupply.me/lib/Zend/Mail.php(1194): Zend_Mail_Transport_Abstract->send(Object(Zend_Mail))
+#2 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Email/Template.php(451): Zend_Mail->send()
+#3 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Email/Template.php(508): Mage_Core_Model_Email_Template->send(Array, Array, Array)
+#4 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Email/Template/Mailer.php(84): Mage_Core_Model_Email_Template->sendTransactional('ced_csmarketpla...', 'general', Array, Array, Array, '1')
+#5 /home/outle19r/public_html/zupply.me/app/code/local/Ced/CsMarketplace/Helper/Mail.php(256): Mage_Core_Model_Email_Template_Mailer->send()
+#6 /home/outle19r/public_html/zupply.me/app/code/local/Ced/CsMarketplace/Helper/Mail.php(84): Ced_CsMarketplace_Helper_Mail->_sendEmailTemplate('ced_csmarketpla...', 'ced_csmarketpla...', Array, '1')
+#7 /home/outle19r/public_html/zupply.me/app/code/local/Ced/CsMarketplace/Model/Vendor.php(211): Ced_CsMarketplace_Helper_Mail->sendAccountEmail('approved', '', Object(Ced_CsMarketplace_Model_Vendor))
+#8 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Abstract.php(316): Ced_CsMarketplace_Model_Vendor->_beforeSave()
+#9 /home/outle19r/public_html/zupply.me/app/code/local/Ced/CsMarketplace/controllers/VendorController.php(74): Mage_Core_Model_Abstract->save()
+#10 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Action.php(418): Ced_CsMarketplace_VendorController->approvalPostAction()
+#11 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Router/Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('approvalPost')
+#12 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#13 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#14 /home/outle19r/public_html/zupply.me/app/Mage.php(684): Mage_Core_Model_App->run(Array)
+#15 /home/outle19r/public_html/zupply.me/index.php(84): Mage::run('', 'store')
+#16 {main}
+2016-05-11T18:32:11+00:00 ERR (3): 
+exception 'Mage_Core_Exception' with message 'Tipo de bloque inválido: Mage_Catalog_Block_Product_List_Related_Right' in /home/outle19r/public_html/zupply.me/app/Mage.php:595
+Stack trace:
+#0 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Layout.php(495): Mage::throwException('Tipo de bloque ...')
+#1 /home/outle19r/public_html/zupply.me/app/code/local/Ced/CsMarketplace/Model/Layout.php(41): Mage_Core_Model_Layout->_getBlockInstance('catalog/product...', Array)
+#2 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Layout.php(472): Ced_CsMarketplace_Model_Layout->createBlock('catalog/product...', 'catalog.product...')
+#3 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Layout.php(239): Mage_Core_Model_Layout->addBlock('catalog/product...', 'catalog.product...')
+#4 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Layout.php(205): Mage_Core_Model_Layout->_generateBlock(Object(Mage_Core_Model_Layout_Element), Object(Mage_Core_Model_Layout_Element))
+#5 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Layout.php(210): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#6 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Action.php(344): Mage_Core_Model_Layout->generateBlocks()
+#7 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Catalog/Helper/Product/View.php(73): Mage_Core_Controller_Varien_Action->generateLayoutBlocks()
+#8 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Catalog/Helper/Product/View.php(144): Mage_Catalog_Helper_Product_View->initProductLayout(Object(Mage_Catalog_Model_Product), Object(Mage_Catalog_ProductController))
+#9 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Catalog/controllers/ProductController.php(132): Mage_Catalog_Helper_Product_View->prepareAndRender(10, Object(Mage_Catalog_ProductController), Object(Varien_Object))
+#10 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Action.php(418): Mage_Catalog_ProductController->viewAction()
+#11 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Router/Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('view')
+#12 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#13 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#14 /home/outle19r/public_html/zupply.me/app/Mage.php(684): Mage_Core_Model_App->run(Array)
+#15 /home/outle19r/public_html/zupply.me/index.php(84): Mage::run('', 'store')
+#16 {main}
+2016-05-11T18:32:18+00:00 ERR (3): 
+exception 'Mage_Core_Exception' with message 'Tipo de bloque inválido: Mage_Catalog_Block_Product_List_Related_Right' in /home/outle19r/public_html/zupply.me/app/Mage.php:595
+Stack trace:
+#0 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Layout.php(495): Mage::throwException('Tipo de bloque ...')
+#1 /home/outle19r/public_html/zupply.me/app/code/local/Ced/CsMarketplace/Model/Layout.php(41): Mage_Core_Model_Layout->_getBlockInstance('catalog/product...', Array)
+#2 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Layout.php(472): Ced_CsMarketplace_Model_Layout->createBlock('catalog/product...', 'catalog.product...')
+#3 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Layout.php(239): Mage_Core_Model_Layout->addBlock('catalog/product...', 'catalog.product...')
+#4 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Layout.php(205): Mage_Core_Model_Layout->_generateBlock(Object(Mage_Core_Model_Layout_Element), Object(Mage_Core_Model_Layout_Element))
+#5 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Layout.php(210): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#6 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Action.php(344): Mage_Core_Model_Layout->generateBlocks()
+#7 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Catalog/Helper/Product/View.php(73): Mage_Core_Controller_Varien_Action->generateLayoutBlocks()
+#8 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Catalog/Helper/Product/View.php(144): Mage_Catalog_Helper_Product_View->initProductLayout(Object(Mage_Catalog_Model_Product), Object(Mage_Catalog_ProductController))
+#9 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Catalog/controllers/ProductController.php(132): Mage_Catalog_Helper_Product_View->prepareAndRender(10, Object(Mage_Catalog_ProductController), Object(Varien_Object))
+#10 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Action.php(418): Mage_Catalog_ProductController->viewAction()
+#11 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Router/Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('view')
+#12 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#13 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#14 /home/outle19r/public_html/zupply.me/app/Mage.php(684): Mage_Core_Model_App->run(Array)
+#15 /home/outle19r/public_html/zupply.me/index.php(84): Mage::run('', 'store')
+#16 {main}
+2016-05-11T18:33:01+00:00 ERR (3): 
+exception 'Mage_Core_Exception' with message 'Tipo de bloque inválido: Mage_Catalog_Block_Product_List_Related_Right' in /home/outle19r/public_html/zupply.me/app/Mage.php:595
+Stack trace:
+#0 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Layout.php(495): Mage::throwException('Tipo de bloque ...')
+#1 /home/outle19r/public_html/zupply.me/app/code/local/Ced/CsMarketplace/Model/Layout.php(41): Mage_Core_Model_Layout->_getBlockInstance('catalog/product...', Array)
+#2 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Layout.php(472): Ced_CsMarketplace_Model_Layout->createBlock('catalog/product...', 'catalog.product...')
+#3 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Layout.php(239): Mage_Core_Model_Layout->addBlock('catalog/product...', 'catalog.product...')
+#4 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Layout.php(205): Mage_Core_Model_Layout->_generateBlock(Object(Mage_Core_Model_Layout_Element), Object(Mage_Core_Model_Layout_Element))
+#5 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Layout.php(210): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#6 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Action.php(344): Mage_Core_Model_Layout->generateBlocks()
+#7 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Catalog/Helper/Product/View.php(73): Mage_Core_Controller_Varien_Action->generateLayoutBlocks()
+#8 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Catalog/Helper/Product/View.php(144): Mage_Catalog_Helper_Product_View->initProductLayout(Object(Mage_Catalog_Model_Product), Object(Mage_Catalog_ProductController))
+#9 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Catalog/controllers/ProductController.php(132): Mage_Catalog_Helper_Product_View->prepareAndRender(10, Object(Mage_Catalog_ProductController), Object(Varien_Object))
+#10 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Action.php(418): Mage_Catalog_ProductController->viewAction()
+#11 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Router/Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('view')
+#12 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#13 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#14 /home/outle19r/public_html/zupply.me/app/Mage.php(684): Mage_Core_Model_App->run(Array)
+#15 /home/outle19r/public_html/zupply.me/index.php(84): Mage::run('', 'store')
+#16 {main}
+2016-05-11T19:33:55+00:00 ERR (3): 
+exception 'Zend_Mail_Transport_Exception' with message 'Unable to send mail. ' in /home/outle19r/public_html/zupply.me/lib/Zend/Mail/Transport/Sendmail.php:137
+Stack trace:
+#0 /home/outle19r/public_html/zupply.me/lib/Zend/Mail/Transport/Abstract.php(348): Zend_Mail_Transport_Sendmail->_sendMail()
+#1 /home/outle19r/public_html/zupply.me/lib/Zend/Mail.php(1194): Zend_Mail_Transport_Abstract->send(Object(Zend_Mail))
+#2 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Email/Template.php(451): Zend_Mail->send()
+#3 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Email/Template.php(508): Mage_Core_Model_Email_Template->send(Array, Array, Array)
+#4 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Email/Template/Mailer.php(84): Mage_Core_Model_Email_Template->sendTransactional('customer_create...', 'general', Array, Array, Array, '1')
+#5 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Customer/Model/Customer.php(680): Mage_Core_Model_Email_Template_Mailer->send()
+#6 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Customer/Model/Customer.php(607): Mage_Customer_Model_Customer->_sendEmailTemplate('customer/create...', 'customer/create...', Array, '1')
+#7 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Customer/controllers/AccountController.php(575): Mage_Customer_Model_Customer->sendNewAccountEmail('registered', '', '1')
+#8 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Customer/controllers/AccountController.php(350): Mage_Customer_AccountController->_welcomeCustomer(Object(Mage_Customer_Model_Customer))
+#9 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Customer/controllers/AccountController.php(303): Mage_Customer_AccountController->_successProcessRegistration(Object(Mage_Customer_Model_Customer))
+#10 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Action.php(418): Mage_Customer_AccountController->createPostAction()
+#11 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Router/Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('createpost')
+#12 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#13 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#14 /home/outle19r/public_html/zupply.me/app/Mage.php(684): Mage_Core_Model_App->run(Array)
+#15 /home/outle19r/public_html/zupply.me/index.php(84): Mage::run('', 'store')
+#16 {main}
+2016-05-11T19:34:24+00:00 ERR (3): 
+exception 'Zend_Mail_Transport_Exception' with message 'Unable to send mail. ' in /home/outle19r/public_html/zupply.me/lib/Zend/Mail/Transport/Sendmail.php:137
+Stack trace:
+#0 /home/outle19r/public_html/zupply.me/lib/Zend/Mail/Transport/Abstract.php(348): Zend_Mail_Transport_Sendmail->_sendMail()
+#1 /home/outle19r/public_html/zupply.me/lib/Zend/Mail.php(1194): Zend_Mail_Transport_Abstract->send(Object(Zend_Mail))
+#2 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Email/Template.php(451): Zend_Mail->send()
+#3 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Email/Template.php(508): Mage_Core_Model_Email_Template->send(Array, Array, Array)
+#4 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Email/Template/Mailer.php(84): Mage_Core_Model_Email_Template->sendTransactional('ced_csmarketpla...', 'general', Array, Array, Array, '1')
+#5 /home/outle19r/public_html/zupply.me/app/code/local/Ced/CsMarketplace/Helper/Mail.php(256): Mage_Core_Model_Email_Template_Mailer->send()
+#6 /home/outle19r/public_html/zupply.me/app/code/local/Ced/CsMarketplace/Helper/Mail.php(84): Ced_CsMarketplace_Helper_Mail->_sendEmailTemplate('ced_csmarketpla...', 'ced_csmarketpla...', Array, '1')
+#7 /home/outle19r/public_html/zupply.me/app/code/local/Ced/CsMarketplace/Model/Vendor.php(211): Ced_CsMarketplace_Helper_Mail->sendAccountEmail('approved', '', Object(Ced_CsMarketplace_Model_Vendor))
+#8 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Abstract.php(316): Ced_CsMarketplace_Model_Vendor->_beforeSave()
+#9 /home/outle19r/public_html/zupply.me/app/code/local/Ced/CsMarketplace/controllers/VendorController.php(74): Mage_Core_Model_Abstract->save()
+#10 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Action.php(418): Ced_CsMarketplace_VendorController->approvalPostAction()
+#11 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Router/Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('approvalPost')
+#12 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#13 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#14 /home/outle19r/public_html/zupply.me/app/Mage.php(684): Mage_Core_Model_App->run(Array)
+#15 /home/outle19r/public_html/zupply.me/index.php(84): Mage::run('', 'store')
+#16 {main}
+2016-05-11T22:26:44+00:00 ERR (3): 
+exception 'Zend_Mail_Transport_Exception' with message 'Unable to send mail. ' in /home/outle19r/public_html/zupply.me/lib/Zend/Mail/Transport/Sendmail.php:137
+Stack trace:
+#0 /home/outle19r/public_html/zupply.me/lib/Zend/Mail/Transport/Abstract.php(348): Zend_Mail_Transport_Sendmail->_sendMail()
+#1 /home/outle19r/public_html/zupply.me/lib/Zend/Mail.php(1194): Zend_Mail_Transport_Abstract->send(Object(Zend_Mail))
+#2 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Email/Template.php(451): Zend_Mail->send()
+#3 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Email/Template.php(508): Mage_Core_Model_Email_Template->send(Array, Array, Array)
+#4 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Email/Template/Mailer.php(84): Mage_Core_Model_Email_Template->sendTransactional('customer_create...', 'general', Array, Array, Array, '1')
+#5 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Customer/Model/Customer.php(680): Mage_Core_Model_Email_Template_Mailer->send()
+#6 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Customer/Model/Customer.php(607): Mage_Customer_Model_Customer->_sendEmailTemplate('customer/create...', 'customer/create...', Array, '1')
+#7 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Customer/controllers/AccountController.php(575): Mage_Customer_Model_Customer->sendNewAccountEmail('registered', '', '1')
+#8 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Customer/controllers/AccountController.php(350): Mage_Customer_AccountController->_welcomeCustomer(Object(Mage_Customer_Model_Customer))
+#9 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Customer/controllers/AccountController.php(303): Mage_Customer_AccountController->_successProcessRegistration(Object(Mage_Customer_Model_Customer))
+#10 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Action.php(418): Mage_Customer_AccountController->createPostAction()
+#11 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Router/Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('createpost')
+#12 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#13 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#14 /home/outle19r/public_html/zupply.me/app/Mage.php(684): Mage_Core_Model_App->run(Array)
+#15 /home/outle19r/public_html/zupply.me/index.php(84): Mage::run('', 'store')
+#16 {main}
+2016-05-11T22:27:52+00:00 ERR (3): 
+exception 'Zend_Mail_Transport_Exception' with message 'Unable to send mail. ' in /home/outle19r/public_html/zupply.me/lib/Zend/Mail/Transport/Sendmail.php:137
+Stack trace:
+#0 /home/outle19r/public_html/zupply.me/lib/Zend/Mail/Transport/Abstract.php(348): Zend_Mail_Transport_Sendmail->_sendMail()
+#1 /home/outle19r/public_html/zupply.me/lib/Zend/Mail.php(1194): Zend_Mail_Transport_Abstract->send(Object(Zend_Mail))
+#2 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Email/Template.php(451): Zend_Mail->send()
+#3 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Email/Template.php(508): Mage_Core_Model_Email_Template->send(Array, Array, Array)
+#4 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Email/Template/Mailer.php(84): Mage_Core_Model_Email_Template->sendTransactional('ced_csmarketpla...', 'general', Array, Array, Array, '1')
+#5 /home/outle19r/public_html/zupply.me/app/code/local/Ced/CsMarketplace/Helper/Mail.php(256): Mage_Core_Model_Email_Template_Mailer->send()
+#6 /home/outle19r/public_html/zupply.me/app/code/local/Ced/CsMarketplace/Helper/Mail.php(84): Ced_CsMarketplace_Helper_Mail->_sendEmailTemplate('ced_csmarketpla...', 'ced_csmarketpla...', Array, '1')
+#7 /home/outle19r/public_html/zupply.me/app/code/local/Ced/CsMarketplace/Model/Vendor.php(211): Ced_CsMarketplace_Helper_Mail->sendAccountEmail('approved', '', Object(Ced_CsMarketplace_Model_Vendor))
+#8 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Abstract.php(316): Ced_CsMarketplace_Model_Vendor->_beforeSave()
+#9 /home/outle19r/public_html/zupply.me/app/code/local/Ced/CsMarketplace/controllers/VendorController.php(74): Mage_Core_Model_Abstract->save()
+#10 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Action.php(418): Ced_CsMarketplace_VendorController->approvalPostAction()
+#11 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Router/Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('approvalPost')
+#12 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#13 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#14 /home/outle19r/public_html/zupply.me/app/Mage.php(684): Mage_Core_Model_App->run(Array)
+#15 /home/outle19r/public_html/zupply.me/index.php(84): Mage::run('', 'store')
+#16 {main}
+2016-05-13T18:07:22+00:00 ERR (3): 
+exception 'Zend_Mail_Transport_Exception' with message 'Unable to send mail. ' in /home/outle19r/public_html/zupply.me/lib/Zend/Mail/Transport/Sendmail.php:137
+Stack trace:
+#0 /home/outle19r/public_html/zupply.me/lib/Zend/Mail/Transport/Abstract.php(348): Zend_Mail_Transport_Sendmail->_sendMail()
+#1 /home/outle19r/public_html/zupply.me/lib/Zend/Mail.php(1194): Zend_Mail_Transport_Abstract->send(Object(Zend_Mail))
+#2 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Email/Template.php(451): Zend_Mail->send()
+#3 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Email/Template.php(508): Mage_Core_Model_Email_Template->send(Array, Array, Array)
+#4 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Email/Template/Mailer.php(84): Mage_Core_Model_Email_Template->sendTransactional('customer_create...', 'general', Array, Array, Array, '1')
+#5 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Customer/Model/Customer.php(680): Mage_Core_Model_Email_Template_Mailer->send()
+#6 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Customer/Model/Customer.php(607): Mage_Customer_Model_Customer->_sendEmailTemplate('customer/create...', 'customer/create...', Array, '1')
+#7 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Customer/controllers/AccountController.php(575): Mage_Customer_Model_Customer->sendNewAccountEmail('registered', '', '1')
+#8 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Customer/controllers/AccountController.php(350): Mage_Customer_AccountController->_welcomeCustomer(Object(Mage_Customer_Model_Customer))
+#9 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Customer/controllers/AccountController.php(303): Mage_Customer_AccountController->_successProcessRegistration(Object(Mage_Customer_Model_Customer))
+#10 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Action.php(418): Mage_Customer_AccountController->createPostAction()
+#11 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Router/Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('createpost')
+#12 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#13 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#14 /home/outle19r/public_html/zupply.me/app/Mage.php(684): Mage_Core_Model_App->run(Array)
+#15 /home/outle19r/public_html/zupply.me/index.php(84): Mage::run('', 'store')
+#16 {main}
+2016-05-13T18:12:00+00:00 ERR (3): 
+exception 'Zend_Mail_Transport_Exception' with message 'Unable to send mail. ' in /home/outle19r/public_html/zupply.me/lib/Zend/Mail/Transport/Sendmail.php:137
+Stack trace:
+#0 /home/outle19r/public_html/zupply.me/lib/Zend/Mail/Transport/Abstract.php(348): Zend_Mail_Transport_Sendmail->_sendMail()
+#1 /home/outle19r/public_html/zupply.me/lib/Zend/Mail.php(1194): Zend_Mail_Transport_Abstract->send(Object(Zend_Mail))
+#2 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Email/Template.php(451): Zend_Mail->send()
+#3 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Email/Template.php(508): Mage_Core_Model_Email_Template->send(Array, Array, Array)
+#4 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Email/Template/Mailer.php(84): Mage_Core_Model_Email_Template->sendTransactional('customer_passwo...', 'support', Array, Array, Array, '1')
+#5 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Customer/Model/Customer.php(680): Mage_Core_Model_Email_Template_Mailer->send()
+#6 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Customer/Model/Customer.php(697): Mage_Customer_Model_Customer->_sendEmailTemplate('customer/passwo...', 'customer/passwo...', Array, '1')
+#7 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Customer/controllers/AccountController.php(741): Mage_Customer_Model_Customer->sendPasswordResetConfirmationEmail()
+#8 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Action.php(418): Mage_Customer_AccountController->forgotPasswordPostAction()
+#9 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Router/Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('forgotpasswordp...')
+#10 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#11 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#12 /home/outle19r/public_html/zupply.me/app/Mage.php(684): Mage_Core_Model_App->run(Array)
+#13 /home/outle19r/public_html/zupply.me/index.php(84): Mage::run('', 'store')
+#14 {main}
+2016-05-16T23:52:01+00:00 ERR (3): 
+exception 'Zend_Mail_Transport_Exception' with message 'Unable to send mail. ' in /home/outle19r/public_html/zupply.me/lib/Zend/Mail/Transport/Sendmail.php:137
+Stack trace:
+#0 /home/outle19r/public_html/zupply.me/lib/Zend/Mail/Transport/Abstract.php(348): Zend_Mail_Transport_Sendmail->_sendMail()
+#1 /home/outle19r/public_html/zupply.me/lib/Zend/Mail.php(1194): Zend_Mail_Transport_Abstract->send(Object(Zend_Mail))
+#2 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Email/Template.php(451): Zend_Mail->send()
+#3 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Email/Template.php(508): Mage_Core_Model_Email_Template->send(Array, Array, Array)
+#4 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Email/Template/Mailer.php(84): Mage_Core_Model_Email_Template->sendTransactional('ced_csmarketpla...', 'general', Array, Array, Array, '1')
+#5 /home/outle19r/public_html/zupply.me/app/code/local/Ced/CsMarketplace/Helper/Mail.php(256): Mage_Core_Model_Email_Template_Mailer->send()
+#6 /home/outle19r/public_html/zupply.me/app/code/local/Ced/CsMarketplace/Helper/Mail.php(84): Ced_CsMarketplace_Helper_Mail->_sendEmailTemplate('ced_csmarketpla...', 'ced_csmarketpla...', Array, '1')
+#7 /home/outle19r/public_html/zupply.me/app/code/local/Ced/CsMarketplace/Model/Vendor.php(211): Ced_CsMarketplace_Helper_Mail->sendAccountEmail('approved', '', Object(Ced_CsMarketplace_Model_Vendor))
+#8 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Abstract.php(316): Ced_CsMarketplace_Model_Vendor->_beforeSave()
+#9 /home/outle19r/public_html/zupply.me/app/code/local/Ced/CsMarketplace/Model/Observer.php(94): Mage_Core_Model_Abstract->save()
+#10 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/App.php(1357): Ced_CsMarketplace_Model_Observer->VendorRegistration(Object(Varien_Event_Observer))
+#11 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/App.php(1336): Mage_Core_Model_App->_callObserverMethod(Object(Ced_CsMarketplace_Model_Observer), 'VendorRegistrat...', Object(Varien_Event_Observer))
+#12 /home/outle19r/public_html/zupply.me/app/Mage.php(448): Mage_Core_Model_App->dispatchEvent('customer_regist...', Array)
+#13 /home/outle19r/public_html/zupply.me/app/code/local/Ced/CsMarketplace/controllers/AccountController.php(424): Mage::dispatchEvent('customer_regist...', Array)
+#14 /home/outle19r/public_html/zupply.me/app/code/local/Ced/CsMarketplace/controllers/AccountController.php(244): Ced_CsMarketplace_AccountController->_dispatchRegisterSuccess(Object(Mage_Customer_Model_Customer))
+#15 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Action.php(418): Ced_CsMarketplace_AccountController->createPostAction()
+#16 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Router/Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('createPost')
+#17 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#18 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#19 /home/outle19r/public_html/zupply.me/app/Mage.php(684): Mage_Core_Model_App->run(Array)
+#20 /home/outle19r/public_html/zupply.me/index.php(84): Mage::run('', 'store')
+#21 {main}
+2016-05-16T23:52:02+00:00 ERR (3): 
+exception 'Zend_Mail_Transport_Exception' with message 'Unable to send mail. ' in /home/outle19r/public_html/zupply.me/lib/Zend/Mail/Transport/Sendmail.php:137
+Stack trace:
+#0 /home/outle19r/public_html/zupply.me/lib/Zend/Mail/Transport/Abstract.php(348): Zend_Mail_Transport_Sendmail->_sendMail()
+#1 /home/outle19r/public_html/zupply.me/lib/Zend/Mail.php(1194): Zend_Mail_Transport_Abstract->send(Object(Zend_Mail))
+#2 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Email/Template.php(451): Zend_Mail->send()
+#3 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Email/Template.php(508): Mage_Core_Model_Email_Template->send(Array, Array, Array)
+#4 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Email/Template/Mailer.php(84): Mage_Core_Model_Email_Template->sendTransactional('customer_create...', 'general', Array, Array, Array, '1')
+#5 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Customer/Model/Customer.php(680): Mage_Core_Model_Email_Template_Mailer->send()
+#6 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Customer/Model/Customer.php(607): Mage_Customer_Model_Customer->_sendEmailTemplate('customer/create...', 'customer/create...', Array, '1')
+#7 /home/outle19r/public_html/zupply.me/app/code/local/Ced/CsMarketplace/controllers/AccountController.php(517): Mage_Customer_Model_Customer->sendNewAccountEmail('registered', '', '1')
+#8 /home/outle19r/public_html/zupply.me/app/code/local/Ced/CsMarketplace/controllers/AccountController.php(292): Ced_CsMarketplace_AccountController->_welcomeCustomer(Object(Mage_Customer_Model_Customer))
+#9 /home/outle19r/public_html/zupply.me/app/code/local/Ced/CsMarketplace/controllers/AccountController.php(245): Ced_CsMarketplace_AccountController->_successProcessRegistration(Object(Mage_Customer_Model_Customer))
+#10 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Action.php(418): Ced_CsMarketplace_AccountController->createPostAction()
+#11 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Router/Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('createPost')
+#12 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#13 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#14 /home/outle19r/public_html/zupply.me/app/Mage.php(684): Mage_Core_Model_App->run(Array)
+#15 /home/outle19r/public_html/zupply.me/index.php(84): Mage::run('', 'store')
+#16 {main}
+2016-05-17T19:11:17+00:00 ERR (3): 
+exception 'Zend_Mail_Transport_Exception' with message 'Unable to send mail. ' in /home/outle19r/public_html/zupply.me/lib/Zend/Mail/Transport/Sendmail.php:137
+Stack trace:
+#0 /home/outle19r/public_html/zupply.me/lib/Zend/Mail/Transport/Abstract.php(348): Zend_Mail_Transport_Sendmail->_sendMail()
+#1 /home/outle19r/public_html/zupply.me/lib/Zend/Mail.php(1194): Zend_Mail_Transport_Abstract->send(Object(Zend_Mail))
+#2 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Email/Template.php(451): Zend_Mail->send()
+#3 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Email/Template.php(508): Mage_Core_Model_Email_Template->send(Array, Array, Array)
+#4 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Email/Template/Mailer.php(84): Mage_Core_Model_Email_Template->sendTransactional('ced_csmarketpla...', 'general', Array, Array, Array, '1')
+#5 /home/outle19r/public_html/zupply.me/app/code/local/Ced/CsMarketplace/Helper/Mail.php(256): Mage_Core_Model_Email_Template_Mailer->send()
+#6 /home/outle19r/public_html/zupply.me/app/code/local/Ced/CsMarketplace/Helper/Mail.php(84): Ced_CsMarketplace_Helper_Mail->_sendEmailTemplate('ced_csmarketpla...', 'ced_csmarketpla...', Array, '1')
+#7 /home/outle19r/public_html/zupply.me/app/code/local/Ced/CsMarketplace/Model/Vendor.php(211): Ced_CsMarketplace_Helper_Mail->sendAccountEmail('approved', '', Object(Ced_CsMarketplace_Model_Vendor))
+#8 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Abstract.php(316): Ced_CsMarketplace_Model_Vendor->_beforeSave()
+#9 /home/outle19r/public_html/zupply.me/app/code/local/Ced/CsMarketplace/Model/Observer.php(94): Mage_Core_Model_Abstract->save()
+#10 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/App.php(1357): Ced_CsMarketplace_Model_Observer->VendorRegistration(Object(Varien_Event_Observer))
+#11 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/App.php(1336): Mage_Core_Model_App->_callObserverMethod(Object(Ced_CsMarketplace_Model_Observer), 'VendorRegistrat...', Object(Varien_Event_Observer))
+#12 /home/outle19r/public_html/zupply.me/app/Mage.php(448): Mage_Core_Model_App->dispatchEvent('customer_regist...', Array)
+#13 /home/outle19r/public_html/zupply.me/app/code/local/Ced/CsMarketplace/controllers/AccountController.php(424): Mage::dispatchEvent('customer_regist...', Array)
+#14 /home/outle19r/public_html/zupply.me/app/code/local/Ced/CsMarketplace/controllers/AccountController.php(244): Ced_CsMarketplace_AccountController->_dispatchRegisterSuccess(Object(Mage_Customer_Model_Customer))
+#15 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Action.php(418): Ced_CsMarketplace_AccountController->createPostAction()
+#16 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Router/Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('createPost')
+#17 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#18 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#19 /home/outle19r/public_html/zupply.me/app/Mage.php(684): Mage_Core_Model_App->run(Array)
+#20 /home/outle19r/public_html/zupply.me/index.php(84): Mage::run('', 'store')
+#21 {main}
+2016-05-17T19:11:19+00:00 ERR (3): 
+exception 'Zend_Mail_Transport_Exception' with message 'Unable to send mail. ' in /home/outle19r/public_html/zupply.me/lib/Zend/Mail/Transport/Sendmail.php:137
+Stack trace:
+#0 /home/outle19r/public_html/zupply.me/lib/Zend/Mail/Transport/Abstract.php(348): Zend_Mail_Transport_Sendmail->_sendMail()
+#1 /home/outle19r/public_html/zupply.me/lib/Zend/Mail.php(1194): Zend_Mail_Transport_Abstract->send(Object(Zend_Mail))
+#2 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Email/Template.php(451): Zend_Mail->send()
+#3 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Email/Template.php(508): Mage_Core_Model_Email_Template->send(Array, Array, Array)
+#4 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Email/Template/Mailer.php(84): Mage_Core_Model_Email_Template->sendTransactional('customer_create...', 'general', Array, Array, Array, '1')
+#5 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Customer/Model/Customer.php(680): Mage_Core_Model_Email_Template_Mailer->send()
+#6 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Customer/Model/Customer.php(607): Mage_Customer_Model_Customer->_sendEmailTemplate('customer/create...', 'customer/create...', Array, '1')
+#7 /home/outle19r/public_html/zupply.me/app/code/local/Ced/CsMarketplace/controllers/AccountController.php(517): Mage_Customer_Model_Customer->sendNewAccountEmail('registered', '', '1')
+#8 /home/outle19r/public_html/zupply.me/app/code/local/Ced/CsMarketplace/controllers/AccountController.php(292): Ced_CsMarketplace_AccountController->_welcomeCustomer(Object(Mage_Customer_Model_Customer))
+#9 /home/outle19r/public_html/zupply.me/app/code/local/Ced/CsMarketplace/controllers/AccountController.php(245): Ced_CsMarketplace_AccountController->_successProcessRegistration(Object(Mage_Customer_Model_Customer))
+#10 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Action.php(418): Ced_CsMarketplace_AccountController->createPostAction()
+#11 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Router/Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('createPost')
+#12 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#13 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#14 /home/outle19r/public_html/zupply.me/app/Mage.php(684): Mage_Core_Model_App->run(Array)
+#15 /home/outle19r/public_html/zupply.me/index.php(84): Mage::run('', 'store')
+#16 {main}
+2016-06-06T15:39:41+00:00 ERR (3): 
+exception 'Zend_Mail_Transport_Exception' with message 'Unable to send mail. ' in /home/outle19r/public_html/zupply.me/lib/Zend/Mail/Transport/Sendmail.php:137
+Stack trace:
+#0 /home/outle19r/public_html/zupply.me/lib/Zend/Mail/Transport/Abstract.php(348): Zend_Mail_Transport_Sendmail->_sendMail()
+#1 /home/outle19r/public_html/zupply.me/lib/Zend/Mail.php(1194): Zend_Mail_Transport_Abstract->send(Object(Zend_Mail))
+#2 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Email/Template.php(451): Zend_Mail->send()
+#3 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Email/Template.php(508): Mage_Core_Model_Email_Template->send('vargas.juandedi...', NULL, Array)
+#4 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Newsletter/Model/Subscriber.php(559): Mage_Core_Model_Email_Template->sendTransactional('newsletter_subs...', 'general', 'vargas.juandedi...', NULL, Array)
+#5 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Newsletter/Model/Subscriber.php(458): Mage_Newsletter_Model_Subscriber->sendConfirmationSuccessEmail()
+#6 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Newsletter/Model/Observer.php(38): Mage_Newsletter_Model_Subscriber->subscribeCustomer(Object(Mage_Customer_Model_Customer))
+#7 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/App.php(1357): Mage_Newsletter_Model_Observer->subscribeCustomer(Object(Varien_Event_Observer))
+#8 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/App.php(1336): Mage_Core_Model_App->_callObserverMethod(Object(Mage_Newsletter_Model_Observer), 'subscribeCustom...', Object(Varien_Event_Observer))
+#9 /home/outle19r/public_html/zupply.me/app/Mage.php(448): Mage_Core_Model_App->dispatchEvent('customer_save_a...', Array)
+#10 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Abstract.php(466): Mage::dispatchEvent('customer_save_a...', Array)
+#11 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Abstract.php(319): Mage_Core_Model_Abstract->_afterSave()
+#12 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Customer/controllers/AccountController.php(301): Mage_Core_Model_Abstract->save()
+#13 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Action.php(418): Mage_Customer_AccountController->createPostAction()
+#14 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Router/Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('createpost')
+#15 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#16 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#17 /home/outle19r/public_html/zupply.me/app/Mage.php(684): Mage_Core_Model_App->run(Array)
+#18 /home/outle19r/public_html/zupply.me/index.php(84): Mage::run('', 'store')
+#19 {main}
+2016-06-06T15:39:42+00:00 ERR (3): 
+exception 'Zend_Mail_Transport_Exception' with message 'Unable to send mail. ' in /home/outle19r/public_html/zupply.me/lib/Zend/Mail/Transport/Sendmail.php:137
+Stack trace:
+#0 /home/outle19r/public_html/zupply.me/lib/Zend/Mail/Transport/Abstract.php(348): Zend_Mail_Transport_Sendmail->_sendMail()
+#1 /home/outle19r/public_html/zupply.me/lib/Zend/Mail.php(1194): Zend_Mail_Transport_Abstract->send(Object(Zend_Mail))
+#2 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Email/Template.php(451): Zend_Mail->send()
+#3 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Email/Template.php(508): Mage_Core_Model_Email_Template->send(Array, Array, Array)
+#4 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Email/Template/Mailer.php(84): Mage_Core_Model_Email_Template->sendTransactional('customer_create...', 'general', Array, Array, Array, '1')
+#5 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Customer/Model/Customer.php(680): Mage_Core_Model_Email_Template_Mailer->send()
+#6 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Customer/Model/Customer.php(607): Mage_Customer_Model_Customer->_sendEmailTemplate('customer/create...', 'customer/create...', Array, '1')
+#7 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Customer/controllers/AccountController.php(575): Mage_Customer_Model_Customer->sendNewAccountEmail('registered', '', '1')
+#8 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Customer/controllers/AccountController.php(350): Mage_Customer_AccountController->_welcomeCustomer(Object(Mage_Customer_Model_Customer))
+#9 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Customer/controllers/AccountController.php(303): Mage_Customer_AccountController->_successProcessRegistration(Object(Mage_Customer_Model_Customer))
+#10 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Action.php(418): Mage_Customer_AccountController->createPostAction()
+#11 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Router/Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('createpost')
+#12 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#13 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#14 /home/outle19r/public_html/zupply.me/app/Mage.php(684): Mage_Core_Model_App->run(Array)
+#15 /home/outle19r/public_html/zupply.me/index.php(84): Mage::run('', 'store')
+#16 {main}
+2016-06-06T15:47:14+00:00 ERR (3): 
+exception 'Zend_Mail_Transport_Exception' with message 'Unable to send mail. ' in /home/outle19r/public_html/zupply.me/lib/Zend/Mail/Transport/Sendmail.php:137
+Stack trace:
+#0 /home/outle19r/public_html/zupply.me/lib/Zend/Mail/Transport/Abstract.php(348): Zend_Mail_Transport_Sendmail->_sendMail()
+#1 /home/outle19r/public_html/zupply.me/lib/Zend/Mail.php(1194): Zend_Mail_Transport_Abstract->send(Object(Zend_Mail))
+#2 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Email/Template.php(451): Zend_Mail->send()
+#3 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Email/Template.php(508): Mage_Core_Model_Email_Template->send(Array, Array, Array)
+#4 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Email/Template/Mailer.php(84): Mage_Core_Model_Email_Template->sendTransactional('ced_csmarketpla...', 'general', Array, Array, Array, '1')
+#5 /home/outle19r/public_html/zupply.me/app/code/local/Ced/CsMarketplace/Helper/Mail.php(256): Mage_Core_Model_Email_Template_Mailer->send()
+#6 /home/outle19r/public_html/zupply.me/app/code/local/Ced/CsMarketplace/Helper/Mail.php(84): Ced_CsMarketplace_Helper_Mail->_sendEmailTemplate('ced_csmarketpla...', 'ced_csmarketpla...', Array, '1')
+#7 /home/outle19r/public_html/zupply.me/app/code/local/Ced/CsMarketplace/Model/Vendor.php(211): Ced_CsMarketplace_Helper_Mail->sendAccountEmail('approved', '', Object(Ced_CsMarketplace_Model_Vendor))
+#8 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Abstract.php(316): Ced_CsMarketplace_Model_Vendor->_beforeSave()
+#9 /home/outle19r/public_html/zupply.me/app/code/local/Ced/CsMarketplace/controllers/VendorController.php(74): Mage_Core_Model_Abstract->save()
+#10 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Action.php(418): Ced_CsMarketplace_VendorController->approvalPostAction()
+#11 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Router/Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('approvalPost')
+#12 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#13 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#14 /home/outle19r/public_html/zupply.me/app/Mage.php(684): Mage_Core_Model_App->run(Array)
+#15 /home/outle19r/public_html/zupply.me/index.php(84): Mage::run('', 'store')
+#16 {main}
+2016-06-06T21:41:18+00:00 ERR (3): 
+exception 'Zend_Mail_Transport_Exception' with message 'Unable to send mail. ' in /home/outle19r/public_html/zupply.me/lib/Zend/Mail/Transport/Sendmail.php:137
+Stack trace:
+#0 /home/outle19r/public_html/zupply.me/lib/Zend/Mail/Transport/Abstract.php(348): Zend_Mail_Transport_Sendmail->_sendMail()
+#1 /home/outle19r/public_html/zupply.me/lib/Zend/Mail.php(1194): Zend_Mail_Transport_Abstract->send(Object(Zend_Mail))
+#2 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Email/Template.php(451): Zend_Mail->send()
+#3 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Email/Template.php(508): Mage_Core_Model_Email_Template->send(Array, Array, Array)
+#4 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Email/Template/Mailer.php(84): Mage_Core_Model_Email_Template->sendTransactional('admin_emails_fo...', 'general', Array, Array, Array, 0)
+#5 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Admin/Model/User.php(294): Mage_Core_Model_Email_Template_Mailer->send()
+#6 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Adminhtml/controllers/IndexController.php(245): Mage_Admin_Model_User->sendPasswordResetConfirmationEmail()
+#7 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Action.php(418): Mage_Adminhtml_IndexController->forgotpasswordAction()
+#8 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Router/Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('forgotpassword')
+#9 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#10 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#11 /home/outle19r/public_html/zupply.me/app/Mage.php(684): Mage_Core_Model_App->run(Array)
+#12 /home/outle19r/public_html/zupply.me/index.php(84): Mage::run('', 'store')
+#13 {main}
+2016-06-22T19:48:03+00:00 ERR (3): 
+exception 'Zend_Mail_Transport_Exception' with message 'Unable to send mail. ' in /home/outle19r/public_html/zupply.me/lib/Zend/Mail/Transport/Sendmail.php:137
+Stack trace:
+#0 /home/outle19r/public_html/zupply.me/lib/Zend/Mail/Transport/Abstract.php(348): Zend_Mail_Transport_Sendmail->_sendMail()
+#1 /home/outle19r/public_html/zupply.me/lib/Zend/Mail.php(1194): Zend_Mail_Transport_Abstract->send(Object(Zend_Mail))
+#2 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Email/Template.php(451): Zend_Mail->send()
+#3 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Email/Template.php(508): Mage_Core_Model_Email_Template->send(Array, Array, Array)
+#4 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/Email/Template/Mailer.php(84): Mage_Core_Model_Email_Template->sendTransactional('admin_emails_fo...', 'general', Array, Array, Array, 0)
+#5 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Admin/Model/User.php(294): Mage_Core_Model_Email_Template_Mailer->send()
+#6 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Adminhtml/controllers/IndexController.php(245): Mage_Admin_Model_User->sendPasswordResetConfirmationEmail()
+#7 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Action.php(418): Mage_Adminhtml_IndexController->forgotpasswordAction()
+#8 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Router/Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('forgotpassword')
+#9 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Controller/Varien/Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#10 /home/outle19r/public_html/zupply.me/app/code/core/Mage/Core/Model/App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#11 /home/outle19r/public_html/zupply.me/app/Mage.php(684): Mage_Core_Model_App->run(Array)
+#12 /home/outle19r/public_html/zupply.me/index.php(84): Mage::run('', 'store')
+#13 {main}

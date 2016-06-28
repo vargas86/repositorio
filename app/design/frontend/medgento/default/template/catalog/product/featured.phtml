@@ -1,0 +1,86 @@
+<?php
+/*
+ * Featured Product Template
+ */
+?>
+<?php
+/**
+ * Product list template
+ *
+ * @see Mage_Catalog_Block_Product_List
+ */
+?>
+<?php
+    $_productCollection=$this->getLoadedProductCollection();
+    $_helper = $this->helper('catalog/output');
+?>
+<?php if(!$_productCollection->count()): ?>
+<p class="note-msg"><?php echo $this->__('There are no products matching the selection.') ?></p>
+<?php else: ?>
+<div class="featured-products">
+    <?php // Grid Mode ?>
+
+    <?php $_collectionSize = $_productCollection->count() ?>
+    <?php $_columnCount = $this->getColumnCount(); ?>
+
+	<?php 
+	//GET COLLECTION SIZE
+	$_collectionSize = 0;	
+	foreach ($_productCollection as $_product){
+		if($this->isFeatured($_product)){
+			$_collectionSize++;
+		}
+	}
+	?>
+
+    <?php $i=0; foreach ($_productCollection as $_product): ?>
+		<?php if(!$this->isFeatured($_product)): continue; endif;?>
+		<?php if ($i++%$_columnCount==0): ?>
+        <div class="products-grid">
+        <?php endif ?>
+            <div class="item<?php if(($i-1)%$_columnCount==0): ?> first<?php elseif($i%$_columnCount==0): ?> last<?php endif; ?>">
+				<div class="thumbnail">
+		            <a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" class="product-image"><img src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize(135); ?>" width="135" height="135" alt="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" /></a>
+					<div class="caption">
+				        <h2 class="product-name"><a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->stripTags($_product->getName(), null, true) ?>"><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></a></h2>
+				        <?php if($_product->getRatingSummary()): ?>
+				        <?php echo $this->getReviewsSummaryHtml($_product, 'short') ?>
+				        <?php endif; ?>
+						<!--p class="short-description"><?php //echo $_helper->productAttribute($_product, $_product->getShortDescription(), 'short_description') ?></p-->
+						<ul class="extension-info">
+						<?php if($_product->hasData('platform')):?>
+							<li><span class="title"><?php echo $this->__('Platform')?></span>
+							<strong class="platform"><?php echo $_product->getAttributeText('platform')?></strong></li>
+						<?php endif?>	
+						<?php if($_product->hasData('compatible_with')):?>
+							<li><span class="title"><?php echo $this->__('Compatibility')?></span></br>
+							<strong class="compatibility">
+								<?php echo implode(', ',$_product->getAttributeText('compatible_with'))?>
+							</strong></li>
+						<?php endif?>
+						</ul>
+						
+				        <!--Price logic-->
+						<?php if($_product->getFinalPrice() == 0):?>
+							<p class="free-price"><?php echo $this->__('Free')?></p>
+						<?php else: ?>
+							<?php echo $this->getPriceHtml($_product, true) ?>
+						<?php endif ?>
+						<!--Ends Price logic-->
+				        <div class="actions">
+				            <?php if($_product->isSaleable()): ?>
+				                <button type="button" title="<?php echo $this->__('Add to Cart') ?>" class="button btn-cart" onclick="setLocation('<?php echo $this->getAddToCartUrl($_product) ?>')"><span><span><?php echo $this->__('Add to Cart') ?></span></span></button>
+				            <?php else: ?>
+				                <p class="availability out-of-stock"><span><?php echo $this->__('Out of stock') ?></span></p>
+				            <?php endif; ?>
+				        </div>
+					</div>
+				</div>
+            </div>
+        <?php if ($i%$_columnCount==0 || $i==$_collectionSize): ?>
+        </div>
+        <?php endif ?>
+    <?php endforeach ?>
+	<!--script type="text/javascript">decorateGeneric($$('ul.products-grid'), ['odd','even','first','last'])</script-->
+</div>
+<?php endif; ?>

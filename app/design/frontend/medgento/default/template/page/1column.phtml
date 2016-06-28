@@ -1,0 +1,111 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2013 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+?>
+<?php
+/**
+ * Template for Mage_Page_Block_Html
+ */
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $this->getLang() ?>" lang="<?php echo $this->getLang() ?>">
+<head>
+<?php echo $this->getChildHtml('head') ?>
+</head>
+<body<?php echo $this->getBodyClass()?' class="'.$this->getBodyClass().'"':'' ?>>
+
+
+<?php echo $this->getChildHtml('after_body_start') ?>	
+<?php echo $this->getChildHtml('global_notices') ?>
+<?php echo $this->getChildHtml('header') ?>
+
+<div class="clear"></div>		
+<div class="container maincontainerz">
+<div class="clear"></div>		
+
+	<?php echo $this->getChildHtml('breadcrumbs') ?>		
+	<div class="main-container col1-layout">
+		<?php echo $this->getChildHtml('global_messages') ?>
+		<div class="col-main">
+			<?php echo $this->getChildHtml('content') ?>
+		</div>
+	</div>
+</div>
+
+
+<?php
+// IF WE ARE ON HOMEPAGE
+if(
+Mage::getSingleton('cms/page')->getIdentifier() == 'home' &&
+Mage::app()->getFrontController()->getRequest()->getRouteName() == 'cms'
+) : ?>
+
+<div class="container">
+<div class="links-home top50">
+
+<div class="home_categoria">
+<div class="h3borde"><h3>Ferretería</h3></div>
+<a class="enlaces_home" href="#"><img src="http://zupply.me/media/images_home/image-material-ferreteria-busqueda.jpg" /></a>
+<a href="#" class="mas">Ver más</a>
+</div>
+<div class="home_categoria">
+<div class="h3borde"><h3>AHR</h3></div>
+<a class="enlaces_home" href="./ahr.html"><img src="http://zupply.me/media/images_home/image-material-aire-acondicionado-busqueda.jpg" /></a>
+<a href="./ahr.html" class="mas">Ver más</a>
+</div>
+<div class="home_categoria last_noborde">
+<div class="h3borde"><h3>Materíal eléctrico</h3></div>
+<a class="enlaces_home" href="#"><img src="http://zupply.me/media/images_home/image-material-electrico-busqueda.jpg" /></a>
+<a href="#" class="mas">Ver más</a>
+</div>
+
+<div class="clear"></div>
+
+<br /><br />
+<div id="home-images-text">
+
+<div class="home-images-text-block">
+<div class="home-images-text-image"><img src="http://zupply.me/media/images_home/iconos-1.png" width="75px"  /></div>
+<div class="home-images-text-text">Calcula el costo y tiempo de entrega con Zupply en cada publicación. Págalo con Zupply, ¡el envío es más barato y está asegurado!</div></div>
+<div class="home-images-text-block">
+<div class="home-images-text-image"><img src="http://zupply.me/media/images_home/iconos-2.png" width="75px"  /></div>
+<div class="home-images-text-text">Tu dinero está 100% protegido con nuestro Programa de Protección al Comprador. Disfruta esta tranquilidad sin cargo adicional, con Zupply.</div></div>
+<div class="home-images-text-block">
+<div class="home-images-text-image"><img src="http://zupply.me/media/images_home/iconos-3.png" width="75px"  /></div>
+<div class="home-images-text-text">Calcula el costo y tiempo de entrega con Zupply en cada publicación. Págalo con Zupply, ¡el envío es más barato y está asegurado!</div></div>
+
+<br /><br /><br /><br />
+</div>
+</div>
+</div>
+<?php endif; ?>
+
+
+
+<?php echo $this->getChildHtml('footer') ?>
+<?php echo $this->getChildHtml('before_body_end') ?>
+<?php echo $this->getAbsoluteFooter() ?>	
+</body>
+</html>

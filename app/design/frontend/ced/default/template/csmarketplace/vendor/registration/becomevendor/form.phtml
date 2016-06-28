@@ -1,0 +1,88 @@
+<?php 
+
+/**
+ * CedCommerce
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+*
+ * @category    design
+ * @package     ced_default
+ * @author 		CedCommerce Core Team <coreteam@cedcommerce.com>
+ * @copyright   Copyright CEDCOMMERCE (http://cedcommerce.com/)
+ * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+ 
+?>
+<style type="text/css">
+	span.ced-csmarketplace-availability-failed{
+		background : url('<?php echo Mage::getBaseUrl('skin'); ?>frontend/base/default/images/ced/csmarketplace/error_msg_icon.gif');
+		display: block;
+		height: 17px;
+		width: 16px;
+	}
+	span.ced-csmarketplace-availability-passed {
+		background : url('<?php echo Mage::getBaseUrl('skin'); ?>frontend/base/default/images/ced/csmarketplace/success_msg_icon.gif');
+		display: block;
+		height: 17px;
+		width: 16px;
+	}
+</style>
+<input type="hidden" name="is_vendor" value="1" id="is_vendor"/>
+<fieldset class="fieldset" id="ced-csmarketplace-registration-fields">
+	<div class="panel panel-default">
+		<div class="panel-heading"><?php echo Mage::helper('csmarketplace')->__('Vendor Information'); ?></div>
+		<div class="panel-body">
+			<?php echo $this->getFormHtml(); ?>
+		</div>
+	</div>
+</fieldset>
+<script type="text/javascript">
+	//<![CDATA[
+		var ced_csmarketplace = new ced_csmarketplace('<?php echo $this->getUrl('csmarketplace/vendor/checkAvailability',array('_secure'=>true,'_nosid'=>true)); ?>','form-validate');
+	//]]>
+</script>
+
+<script type="text/javascript">
+
+
+/*
+ * jQuery replaceText - v1.1 - 11/21/2009
+ * http://benalman.com/projects/jquery-replacetext-plugin/
+ * 
+ * Copyright (c) 2009 "Cowboy" Ben Alman
+ * Dual licensed under the MIT and GPL licenses.
+ * http://benalman.com/about/license/
+ */
+(function($){jQuery.fn.replaceText=function(b,a,c){return this.each(function(){var f=this.firstChild,g,e,d=[];if(f){do{if(f.nodeType===3){g=f.nodeValue;e=g.replace(b,a);if(e!==g){if(!c&&/</.test(e)){$(f).before(e);d.push(f)}else{f.nodeValue=e}}}}while(f=f.nextSibling)}d.length&&$(d).remove()})}})(jQuery);
+
+
+jQuery(window).load(function(){
+
+jQuery("body *").replaceText( /Email Address/gi, "Email principal" );
+
+jQuery("body *").replaceText( /Contact Number/gi, "Teléfono principal" );
+
+jQuery("body *").replaceText( /Información Personal/gi, "Representante Legal" );
+jQuery("body *").replaceText( /Información de vendedor/gi, "Información de la empresa o vendedor" );
+jQuery("body *").replaceText( /Company Logo/gi, "Logo de la empresa" );
+jQuery("body *").replaceText( /Company/gi, "Razón Social" );
+jQuery("body *").replaceText( /Acerca de/gi, "¿Cuál es tu producto principal?" );
+jQuery("body *").replaceText( /Email de soporte/gi, "Email secundario" );
+jQuery("body *").replaceText( /Public Name/gi, "Nombre visible/público de tu empresa" );
+jQuery("body *").replaceText( /URL de tu tienda/gi, "Elige una URL única para tu tienda, no debe contener espacios." );
+jQuery("body *").replaceText( /Banner/gi, "Foto de tu empresa o fachada" );
+jQuery("body *").replaceText( /Ubicación/gi, "Estado" );
+jQuery("body *").replaceText( /Address/gi, "Calle y número" );
+jQuery("body *").replaceText( /City/gi, "Ciudad" );
+jQuery("body *").replaceText( /Zip/gi, "" );
+jQuery("body *").replaceText( /Postal Code/gi, "Código postal" );
+
+});
+
+
+</script>
