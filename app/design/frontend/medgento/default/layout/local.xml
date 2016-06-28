@@ -1,0 +1,238 @@
+<?xml version="1.0" ?>
+
+<layout>
+	<remove_paypal_logo>
+		<reference name="right">
+			<action method="unsetChild">
+				<block>paypal.partner.right.logo</block>
+			</action>
+		</reference>
+	</remove_paypal_logo>
+  
+
+	<remove_callouts>
+		<reference name="left">
+			<action method="unsetChild">
+				<block>left.permanent.callout</block>
+			</action>
+		</reference>
+		<reference name="right">
+			<action method="unsetChild">
+				<block>right.permanent.callout</block>
+			</action>
+		</reference>
+	</remove_callouts>
+
+	<remove_polls>
+		<reference name="right">
+			<action method="unsetChild">
+				<block>right.poll</block>
+			</action>
+		</reference>
+	</remove_polls>
+
+	<remove_compare>
+		<reference name="left">
+			<action method="unsetChild">
+				<block>catalog.compare.sidebar</block>
+			</action>
+		</reference>
+		<reference name="right">
+			<action method="unsetChild">
+				<block>catalog.compare.sidebar</block>
+			</action>
+		</reference>
+	</remove_compare>
+
+	<update_account_navigation>
+		<reference name="left">
+			<action method="unsetChild">
+				<block>customer_account_navigation</block>
+			</action>
+			<block type="customer/account_navigation" name="customer_account_navigation" before="-" template="customer/account/navigation.phtml">
+				<action method="addLink" translate="label" module="customer">
+					<name>account</name><path>customer/account/</path><label>Account Dashboard</label>
+				</action>
+                <action method="addLink" translate="label" module="customer">
+                	<name>account_edit</name><path>customer/account/edit/</path><label>Account Information</label>
+                </action>
+                <action method="addLink" translate="label" module="customer">
+                	<name>address_book</name><path>customer/address/</path><label>Address Book</label>
+                </action>
+                <action method="addLink" translate="label" module="sales">
+                	<name>orders</name><path>sales/order/history/</path><label>My Orders</label>
+                </action>
+                <action method="addLink" translate="label" module="downloadable">
+                	<name>downloadable_products</name><path>downloadable/customer/products</path><label>My Downloadable Products</label>
+                </action>
+                <action method="addLink" translate="label" module="newsletter">
+                	<name>newsletter</name><path>newsletter/manage/</path><label>Newsletter Subscriptions</label>
+                </action>	
+			</block>
+		</reference>
+	</update_account_navigation>
+
+	<update_top_links>
+		<reference name="top.links">
+			<action method="removeLinkBlock">
+				<block>wishlist_link</block>
+			</action>
+		</reference>
+	</update_top_links>
+
+	<update_footer_links>
+		<reference name="footer">
+			<action method="unsetChild">
+				<block>footer_links</block>
+			</action>
+		</reference>	
+	</update_footer_links>
+
+	<remove_product_type_options>
+		<reference name="product.info">
+			<!--<remove name="product.info.options.wrapper"/>-->
+		</reference>
+	</remove_product_type_options>
+	<!--LESS Approach-->	
+	<default>
+		<update handle="remove_callouts" />
+		<update handle="remove_polls" />
+		<update handle="remove_compare" />
+		<update handle="update_top_links" />
+		<update handle="update_footer_links" />
+
+
+ <remove name="left.newsletter"/>
+   <remove name="right.reports.product.compared"/>
+
+		<reference name="head">
+			<block type="core/text" name="jQuery.noConflict">
+				<action method="setText">
+					<text><![CDATA[<script type="text/javascript">jQuery.noConflict();</script><script type="text/javascript">jQuery('.stylesheet-less').attr('rel', 'stylesheet/less');</script>]]></text>
+				</action>
+			</block>
+			<action method="removeItem">
+				<type>skin_css</type>
+				<item>css/styles.css</item>
+			</action>
+			<action method="addItem">
+				<type>skin_js</type>
+				<item>js/jquery-1.10.2.js</item>
+			</action>
+			
+			
+			<action method="addItem">
+				<type>skin_js</type>
+				<item>js/lightbox/lightbox-2.6.min.js</item>
+			</action>
+			<action method="addItem">
+				<type>skin_js</type>
+				<item>js/lightbox/modernizr.custom.js</item>
+			</action>
+			<action method="addItem">
+				<type>skin_js</type>
+				<item>js/bootstrap.js</item>
+			</action>
+			<!--action method="addItem">
+				<type>skin_css</type>
+				<item>css/magentodev.css</item>
+			</action-->
+			<action method="addItem">
+				<type>skin_css</type>
+				<item>css/lightbox/lightbox.css</item>
+			</action>
+			<action method="addItem">
+				<type>skin_css</type>
+				<item>css/custom.less</item>
+				<params>class="stylesheet-less"</params>
+			</action>
+
+
+			<action method="addItem">
+				<type>skin_css</type>
+				<item>css/og.css</item>
+			</action>	
+
+		</reference>
+		<reference name="before_body_end">
+			<block type="core/template" name="global_js" template="page/html/globalJS.phtml"/>
+		</reference>
+	</default>
+
+	<cms_index_index>
+		<update handle="remove_paypal_logo" />
+	</cms_index_index>
+
+	<catalog_category_default>
+		<update handle="remove_paypal_logo" />
+		<update handle="page_two_columns_left" />
+	</catalog_category_default>
+
+	<catalog_category_layered>
+		<update handle="remove_paypal_logo" />
+		<update handle="page_two_columns_left" />
+	</catalog_category_layered>
+
+
+
+	<catalog_product_view>
+		<update handle="remove_paypal_logo" />
+		<update handle="remove_product_type_options"/>
+		<reference name="product.clone_prices">
+			<remove name="product.info.addto"/>
+		</reference>
+
+	</catalog_product_view>
+
+	<downloadable_customer_products>
+		<update handle="remove_compare" />
+	</downloadable_customer_products>
+
+	<customer_account>
+		<update handle="update_account_navigation" />
+	</customer_account>
+ <contacts_index_index>
+        <reference name="root">
+            <action method="setTemplate"><template>page/1column.phtml</template></action>    
+        </reference>
+ </contacts_index_index>
+	<!--PRODUCT_TYPE_downloadable>
+		<reference name="product.info.options.wrapper">
+			 <action method="unsetChild"><block>product.info.downloadable.options</block></action>
+		</reference>
+	</PRODUCT_TYPE_downloadable-->
+<checkout_cart_index>
+    <remove name="checkout.cart.shipping" />
+</checkout_cart_index>
+
+<checkout_cart_index>
+        <reference name="content">
+            <remove name="checkout.cart.coupon"/>
+        </reference>
+</checkout_cart_index>
+
+<catalog_product_view>
+    <reference name="root">
+        <action method="setTemplate"><template>page/2columns-left.phtml</template></action>
+    </reference>
+</catalog_product_view>
+
+
+ 	<catalogsearch_result_index>
+     <reference name="root">
+        <action method="setTemplate"><template>page/2columns-left.phtml</template></action>
+    </reference>
+	 </catalogsearch_result_index>
+
+
+<default> <!--Barra Lateral -->
+<reference name="left">
+<!--block type="catalog/navigation" name="catalog.leftnav" template="catalog/navigation/left.phtml" /-->
+<block type="cms/block" name="Tarjetas" >
+<action method="setBlockId"><block_id>tarjetas</block_id></action>
+</block>
+</reference>
+</default>
+
+
+</layout>

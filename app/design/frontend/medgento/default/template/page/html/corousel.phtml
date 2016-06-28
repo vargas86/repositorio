@@ -1,0 +1,44 @@
+<!--div class="home-banner-wrapper">
+	<div class="home-slider"-->
+		<?php 
+		$slides = $this->getSlides();
+		$slideCount = count($this->getSlides());
+
+		?>
+
+		<?php if($slideCount > 0): ?>
+		<div id="carousel-generic" class="carousel slide" data-ride="carousel">
+		  	<ol class="carousel-indicators">
+			<?php for($count = 0; $count < $slideCount; $count++){?>
+				<li data-target="#carousel-generic" data-slide-to="<?php echo $count ?>" class="<?php if($count == 0):?>active<?php endif;?>"></li>	
+			<?php }?>
+			</ol>
+
+	
+		  	<div class="carousel-inner">
+		  	<?php foreach($slides as $sortOrder => $slide):?>
+				<div class="item <?php if($sortOrder == 0):?>active<?php endif?>">
+					<img src="<?php echo $this->getSkinUrl($slide['src'])?>" alt="<?php echo $this->__('Extension Development')?>">
+						<div class="carousel-caption">
+							<?php if(isset($slide['caption'])):?>
+							<?php echo $this->__($slide['caption'])?>
+							<?php  endif;?>
+				  		</div>
+				</div>	
+		  	<?php  endforeach;?>
+		  	</div>
+		  	
+		  	<a class="left carousel-control" href="#carousel-generic" data-slide="prev">
+				<span class="glyphicon glyphicon-chevron-left"></span>
+		  	</a>
+		  	<a class="right carousel-control" href="#carousel-generic" data-slide="next">
+				<span class="glyphicon glyphicon-chevron-right"></span>
+		  	</a>
+		</div>
+		<?php endif;?>
+	</div>
+	<!--div class="home-certified-logo"-->
+	<?php //echo $this->getLayout()->createBlock('cms/block')->setBlockId('magento_certified_logo')->toHtml()?>	
+	<!--/div>
+</div-->
+

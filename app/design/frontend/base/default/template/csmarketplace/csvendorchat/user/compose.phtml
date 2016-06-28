@@ -1,0 +1,136 @@
+<?php
+/**
+ * CedCommerce
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ *
+ * @category    design
+ * @package     base_default
+ * @author 		CedCommerce Core Team <coreteam@cedcommerce.com>
+ * @copyright   Copyright CEDCOMMERCE (http://cedcommerce.com/)
+ * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+
+$vendor_id=$this->getRequest()->getParam('id');
+$vendor=Mage::getModel('csmarketplace/vendor')->load($vendor_id);
+$vendor_email=$vendor->getEmail();
+$messages=$this->getinboxcollection();
+$vendors=Mage::getModel('csmarketplace/vendor')->getCollection()->getData();
+
+?>
+<div class="top_msg"></div>
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+	<!-- Content Header (Page header) -->
+	<section class="content-header content-header-wrap">
+		<h3>Customer Vendor Conversation Area</h3>
+	</section>
+
+	<!-- Main content -->
+	<section class="content">
+		<div class="row">
+			<div class="left-sidebar-wrap">
+				<!--               <a href="mailbox.html" class="btn btn-primary btn-block margin-bottom">Back to Inbox</a>
+ -->			<div class="box-header with-border box-folder">
+						<h3 class="box-title">Folders</h3>
+				</div>
+				<div class="box box-solid">
+					
+					<div class="box-body no-padding">
+						<ul class="nav nav-pills nav-stacked">
+							<li><a
+								href="<?php echo Mage::getUrl('csvendorchat/frontend/inbox')?>" class=""> Inbox <span
+									class="label label-primary pull-right"><?php  if(count($messages)>0){echo count($messages);}?></span></a></li>
+							<li><a
+								href="<?php echo Mage::getUrl('csvendorchat/frontend/sent')?>" class="sent-mail-tab"> Sent</a></li>
+
+						</ul>
+					</div>
+					<!-- /.box-body -->
+				</div>
+				
+			</div>
+			<!-- /.col -->
+			<div class="right-sidebar-wrap mail-compose">
+				<div class="box box-primary">
+					<div class="box-header with-border">
+						<h3 class="box-title">Compose New Message</h3>
+						<div class="clear"></div>
+					</div>
+					<!-- /.box-header -->
+					<form method="post"
+						action="<?php echo Mage::getBaseUrl()?>csvendorchat/frontend/savechat"
+						enctype="multipart/form-data">
+						<?php if($vendor_id){?>
+						<div class="form-group">
+							<input class="form-control" name="receiver_email"
+								name="receiver_email" placeholder="TO:"
+								value="<?php  if($vendor_id)echo $vendor_email;?>" />
+						</div>
+						<?php }
+						else{
+						?>
+						
+						<div class="chhosevendors">
+					     <select name="vendor_data">
+					 
+						<option value="">Select the Vendor</option>
+					
+					   	 <?php foreach ($vendors as $key=>$value){
+					   		$vendor=Mage::getModel('csmarketplace/vendor')->load($value['entity_id']);
+					   		$vendor_email=$vendor->getEmail();
+					   		$vendor_name=$vendor->getName();
+					   		
+					   		?>
+					   		<option value="<?php echo $value['entity_id']?>"><?php echo $vendor_name ?></option>
+						<?php }?>
+					</select>
+				</div>
+				<?php }?>
+						<input type="hidden" value="<?php echo $vendor_id?>"
+							name="vendor_id" />
+						<div class="form-group">
+							<input class="form-control" name="email_subject"
+								placeholder="Subject:" id="vendor_subject" value="" />
+						</div>
+						<div class="loading_send" style="display: none">
+							<img
+								src="<?php echo Mage::getBaseUrl('skin')?>frontend/ced/default/css/ced/csvendorchat/images/loadingchat.gif"
+								alt="sending..." class="sending" />
+						</div>
+						<div class="form-group">
+							<textarea id="compose-textarea" name="text_email"
+								class="form-control" style="height: 300px" value="">
+                    </textarea>
+						</div>
+
+						<div class="box-footer">
+							<div class="pull-right">
+
+								<button class="btn btn-primary" id="btn-chat">
+									<i class="fa fa-envelope-o"></i> Send
+								</button>
+							</div>
+
+						</div>
+						<!-- /.box-footer -->
+					</form>
+				</div>
+				<!-- /.col -->
+				<div class="clear"></div>
+			</div>
+			<div class="clear"></div>
+			<!-- /.row -->
+	
+	</section>
+	<!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
+
+
+</body>
