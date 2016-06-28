@@ -14,7 +14,15 @@ jQuery(window).load(function(){ jQuery('#loading-overlay').fadeOut(250);   });
 			 <?php /* if ($this->getIsHomePage()):  ?>
         <h1 class="logo"><strong><?php echo $this->getLogoAlt() ?></strong><a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a></h1>
         <?php  else: */ ?>
+        <div>
         <a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><img src="http://zupply.me/media/z_logo_blanco.png" alt="<?php echo $this->getLogoAlt() ?>" /></a>
+            <?php if ($this->getIsHomePage()){  ?>
+
+                <h2 style="color:#FFF; float: left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MUEVE TUS STOCKS.</h2>
+
+            <?php } ?>
+
+        </div>
         <?php //endif ?>
          
             <?php //echo $this->getChildHtml('topLinks') ?>
@@ -36,13 +44,13 @@ jQuery(window).load(function(){ jQuery('#loading-overlay').fadeOut(250);   });
 
 
              </div>
-
+<!--
        <?php if ($this->getIsHomePage()){  ?>
 
                   <h2 style="color:#FFF; float: left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MUEVE TUS STOCKS.</h2>
 
         <?php } ?>
-
+-->
             <div class="quick-access">
 
             <?php echo $this->getChildHtml('topSearch') ?>
