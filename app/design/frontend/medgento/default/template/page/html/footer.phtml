@@ -10,13 +10,15 @@
 </style>
 <div class="container foooter">
 	<div class="footer-container">
-		<div class="footer">
-		    <?php echo $this->getChildHtml() ?>
-		    
-		</div>
+
 		<div class="menu-footer-block">
 			<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('footer-menu')->toHtml()?>
 		</div>
+
+		<div class="footer">
+		    <?php echo $this->getChildHtml() ?>
+		</div>
+
 		<div class="footer-bancos">
 			<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('formas-de-pago')->toHtml()?>
 		</div>
