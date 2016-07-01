@@ -71,7 +71,7 @@ a.enlaces_home { color: #6d6e71 !important; text-decoration: none; }
 #menu_superior a {  margin:0 2px; font-size: 14px; color:#FFF;}
 
 .foooter {  background: #4b4b4b; width: 100% !important; margin-top: 50px; }
-.footer p, .footer p a { text-align: center !important; width: 100% !important; color:#FFF !important;  }
+.footer p, .footer p a { text-align: center !important; width: 100% !important; color:#FFF !important; font-size: 12px;  }
 .footer p { margin: 0 auto !important; display: block !important; }
 .footer { margin: 0 auto !important;  float: none !important; } 
 

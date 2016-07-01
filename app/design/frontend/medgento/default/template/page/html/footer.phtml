@@ -14,9 +14,12 @@
 		    <?php echo $this->getChildHtml() ?>
 		    
 		</div>
+		<div class="menu-footer-block">
+			<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('footer-menu')->toHtml()?>
+		</div>
 		<div class="footer-bancos">
-		<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('formas-de-pago')->toHtml()?>
-		</div>	
+			<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('formas-de-pago')->toHtml()?>
+		</div>
 		<!--div class="footer-logos" -->
 		<!-- ?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('medgento_footer_right_logo')->toHtml()? -->
 		<!-- /div -->
