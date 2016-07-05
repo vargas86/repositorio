@@ -95,17 +95,27 @@ Mage::app()->getFrontController()->getRequest()->getRouteName() == 'cms'
 <div class="clear"></div>
 
 <br /><br />
+
+<!-- /////////////////////////// BENEFICIOS ////////////////////////////////// -->
 <div id="home-images-text">
 
-<div class="home-images-text-block">
+	<!-- BENEFICIOS 1 -->
+	<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('beneficios-1')->toHtml()?>
+<!-- div class="home-images-text-block">
 <div class="home-images-text-image"><img src="http://zupply.me/media/images_home/iconos-1.png" width="75px"  /></div>
-<div class="home-images-text-text">Calcula el costo y tiempo de entrega con Zupply en cada publicación. Págalo con Zupply, ¡el envío es más barato y está asegurado!</div></div>
-<div class="home-images-text-block">
+<div class="home-images-text-text">Calcula el costo y tiempo de entrega con Zupply en cada publicación. Págalo con Zupply, ¡el envío es más barato y está asegurado!</div></div -->
+
+	<!-- BENEFICIOS 2 -->
+	<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('beneficios-2')->toHtml()?>
+<!-- div class="home-images-text-block">
 <div class="home-images-text-image"><img src="http://zupply.me/media/images_home/iconos-2.png" width="75px"  /></div>
-<div class="home-images-text-text">Tu dinero está 100% protegido con nuestro Programa de Protección al Comprador. Disfruta esta tranquilidad sin cargo adicional, con Zupply.</div></div>
-<div class="home-images-text-block">
+<div class="home-images-text-text">Tu dinero está 100% protegido con nuestro Programa de Protección al Comprador. Disfruta esta tranquilidad sin cargo adicional, con Zupply.</div></div -->
+
+	<!-- BENEFICIOS 3 -->
+	<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('beneficios-3')->toHtml()?>
+<!-- div class="home-images-text-block">
 <div class="home-images-text-image"><img src="http://zupply.me/media/images_home/iconos-3.png" width="75px"  /></div>
-<div class="home-images-text-text">Calcula el costo y tiempo de entrega con Zupply en cada publicación. Págalo con Zupply, ¡el envío es más barato y está asegurado!</div></div>
+<div class="home-images-text-text">Calcula el costo y tiempo de entrega con Zupply en cada publicación. Págalo con Zupply, ¡el envío es más barato y está asegurado!</div></div -->
 
 <br /><br /><br /><br />
 </div>
