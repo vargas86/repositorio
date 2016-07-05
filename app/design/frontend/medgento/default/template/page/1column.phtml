@@ -65,21 +65,32 @@ Mage::app()->getFrontController()->getRequest()->getRouteName() == 'cms'
 <div class="container">
 <div class="links-home top50">
 
-<div class="home_categoria">
-<div class="h3borde"><h3>Ferretería</h3></div>
-<a class="enlaces_home" href="#"><img src="http://zupply.me/media/images_home/image-material-ferreteria-busqueda.jpg" /></a>
-<a href="#" class="mas">Ver más</a>
-</div>
-<div class="home_categoria">
-<div class="h3borde"><h3>AHR</h3></div>
-<a class="enlaces_home" href="./ahr.html"><img src="http://zupply.me/media/images_home/image-material-aire-acondicionado-busqueda.jpg" /></a>
-<a href="./ahr.html" class="mas">Ver más</a>
-</div>
-<div class="home_categoria last_noborde">
-<div class="h3borde"><h3>Materíal eléctrico</h3></div>
-<a class="enlaces_home" href="#"><img src="http://zupply.me/media/images_home/image-material-electrico-busqueda.jpg" /></a>
-<a href="#" class="mas">Ver más</a>
-</div>
+
+<!-- /////////////////////////// CATEGORIAS IMAGEN HOME ////////////////////////////////// -->
+
+	<!-- CATEGORIA 1 -->
+	<div>{{widget type="cms/widget_block" template="cms/widget/static_block/default.phtml" block_id="7"}}</div>
+	<!-- div class="home_categoria">
+    <div class="h3borde"><h3>Ferretería</h3></div>
+    <a class="enlaces_home" href="#"><img src="http://zupply.me/media/images_home/image-material-ferreteria-busqueda.jpg" /></a>
+    <a href="#" class="mas">Ver más</a>
+    </div -->
+
+	<!-- CATEGORIA 2 -->
+	<div>{{widget type="cms/widget_block" template="cms/widget/static_block/default.phtml" block_id="8"}}</div>
+	<!-- div class="home_categoria">
+    <div class="h3borde"><h3>AHR</h3></div>
+    <a class="enlaces_home" href="./ahr.html"><img src="http://zupply.me/media/images_home/image-material-aire-acondicionado-busqueda.jpg" /></a>
+    <a href="./ahr.html" class="mas">Ver más</a>
+    </div -->
+
+	<!-- CATEGORIA 3 -->
+	<div>{{widget type="cms/widget_block" template="cms/widget/static_block/default.phtml" block_id="9"}}</div>
+	<!-- div class="home_categoria last_noborde">
+    <div class="h3borde"><h3>Materíal eléctrico</h3></div>
+    <a class="enlaces_home" href="#"><img src="http://zupply.me/media/images_home/image-material-electrico-busqueda.jpg" /></a>
+    <a href="#" class="mas">Ver más</a>
+    </div -->
 
 <div class="clear"></div>
 
