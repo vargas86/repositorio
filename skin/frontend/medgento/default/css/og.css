@@ -228,8 +228,8 @@ div.f-column-title2 { margin-top: 10px; margin-bottom: 15px; height: 10px;}
 #tarjetas { width: 100%; height: 50px; background: #FFF; display: block; position: relative;  }
 .header-row  { border:none !important; padding:5px 0 0 0 !important; }
 .tarjeta_header { max-height: 50px; max-width: 80px !important; margin-right: 15px; padding-top: 5px; }
-#tarjetas p{ font-size: 18px; line-height: 50px; vertical-align: middle; display: inline-block; float: left; margin: 0; padding:0; position: relative; }
-#tarjetas .header-container { max-height: 100% !important; margin: 0 auto; }
+#tarjetas p{ font-size: 11px; line-height: 50px; vertical-align: middle; display: inline-block; float: right; margin: 0; padding:0; position: relative; }
+#tarjetas .header-container { max-height: 100% !important; margin: 0 auto; width: 581px; }
 
 .top50 { margin-top: 50px; }
 .home_categoria { height: 200px; margin-bottom: 100px; overflow: hidden; width: 33%; padding: 10px 1.5% 40px; float: left; text-align: center;  position: relative; }
