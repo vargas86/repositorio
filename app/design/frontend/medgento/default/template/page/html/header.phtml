@@ -61,11 +61,12 @@ jQuery(window).load(function(){ jQuery('#loading-overlay').fadeOut(250);   });
     
     <?php if ($this->getIsHomePage()){  ?>
     <div id="tarjetas" class="nomobile">
-      <div class="header-container">
+        <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('aviso-formas-de-pago')->toHtml()?>
+      <!-- div class="header-container">
       <p>Aceptamos todas las tarjetas de crédito, débito, depósito, transferencia o pago en efectivo.&nbsp;&nbsp;&nbsp;&nbsp;</p> 
       <img style="float: right; margin-top: 8px;" class="tarjeta_header" src ="http://zupply.me/media/images_home/tarjetas/visaMaster.png" />
 
-      </div>
+      </div -->
     </div>
     <?php } ?>
 
