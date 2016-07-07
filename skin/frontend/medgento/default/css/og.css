@@ -284,10 +284,11 @@ div.f-column-title2 { margin-top: 10px; margin-bottom: 15px; height: 10px;}
 
 /* .home_categoria:hover .mas { border-bottom: 40px solid #ff7900; color:#FFF !important; } */
 .home_categoria:hover .mas { color:#000 !important; }
-
+.home_categoria a { color:#444442; }
+.home_categoria a:hover { color:white !important; }
 
 .clear { width: 100%; clear: both; }
-.last_noborde { border: none !important; }
+.last_noborde { /*border: none !important;*/ }
 
 .breadcrumbs { margin-top: 50px;  }
 .cms-home .maincontainerz{ margin-top: -40px !important; }
