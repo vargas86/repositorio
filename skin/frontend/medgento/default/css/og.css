@@ -236,7 +236,8 @@ div.f-column-title2 { margin-top: 10px; margin-bottom: 15px; height: 10px;}
 #tarjetas .header-container { max-height: 100% !important; margin: 0 auto; width: 581px; }
 
 .top50 { margin-top: 50px; }
-.home_categoria { height: 200px; margin-bottom: 100px; overflow: hidden; width: 33%; padding: 10px 1.5% 40px; float: left; text-align: center;  position: relative; }
+/*.home_categoria { height: 200px; margin-bottom: 100px; overflow: hidden; width: 33%; padding: 10px 1.5% 40px; float: left; text-align: center;  position: relative; }*/
+.home_categoria { height: 232px; margin-bottom: 100px; overflow: hidden; width: 32%; padding: 10px 15px 10px 15px; float: left; text-align: center; position: relative; border: thin solid; margin: 0 2px; border-bottom: 2px solid #e4a307; }
 .home_categoria img { width: 95%; display: block; margin: 0 auto; }
 .home_categoria .h3borde { padding: 10px 10px 0; color:#444442 !important;
     text-decoration: none;
