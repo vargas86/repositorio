@@ -41,7 +41,7 @@ jQuery(window).load(function(){ jQuery('#loading-overlay').fadeOut(250);   });
 <?php     if(Mage::getSingleton('customer/session')->isLoggedIn()){ ?>
                           <div id="menu_4"><a href="<?php echo Mage::getUrl('customer/account/logout'); ?>">| Cerrar sesión </a></div>
 <?php } ?>
-                          <div id="menu_5"><a href="http://zupply.me/index.php/faqs">| FAQ's</a></div>
+                          <a href="http://zupply.me/index.php/faqs"><div id="menu_5">| FAQ's</div></a>
 
 
              </div>

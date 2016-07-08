@@ -67,8 +67,14 @@ a.enlaces_home { color: #6d6e71 !important; text-decoration: none; }
 .quick-access { max-width: 50%; margin: 10px 20px; padding: 0 20px; float: left;
 }
 
-#menu_superior {  margin: 20px 0px; float: right; }
+#menu_superior {  /*margin: 20px 0px;*/ float: right; }
 #menu_superior a {  margin:0 2px; font-size: 14px; color:#FFF;}
+
+#menu_1 { margin: 20px 0px; float: left; }
+#menu_2 { margin: 20px 0px; float: left; }
+#menu_3 { margin: 20px 0px; float: left; }
+#menu_4 { margin: 20px 0px; float: left; }
+#menu_5 { margin: 20px 0px; float: left; /* background-color: red; */ width: 73px; background-image: url(http://zupply.me/media/wysiwyg/home/faq.png); background-repeat: no-repeat; background-size: 31%; background-position-x: 47px; background-position-y: center; font-weight: 300; }
 
 .foooter { background: #f9f9f9; width: 100% !important; margin-top: 50px; }
 .footer p, .footer p a { text-align: center !important; width: 100% !important; color:#FFF !important; font-size: 12px;  }
