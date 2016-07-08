@@ -243,6 +243,7 @@ div.f-column-title2 { margin-top: 10px; margin-bottom: 15px; height: 10px;}
     .home_categoria {
         float: none;
         margin-bottom: 15px;
+        width: 100%;
     }
 }
 

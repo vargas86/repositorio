@@ -31,17 +31,17 @@ jQuery(window).load(function(){ jQuery('#loading-overlay').fadeOut(250);   });
 
 <?php     if(!Mage::getSingleton('customer/session')->isLoggedIn()){ ?>
                          
-                          <a href="http://zupply.me/index.php/csmarketplace/account/create/">Quiero ser proveedor | </a> 
-                          <a href="http://zupply.me/index.php/customer/account/login/">Iniciar sesión </a> 
+                          <div id="menu_1"><a href="http://zupply.me/index.php/csmarketplace/account/create/">Quiero ser proveedor | </a></div>
+                          <div id="menu_2"><a href="http://zupply.me/index.php/customer/account/login/">Iniciar sesión </a></div>
 <?php } ?>
-              
-              
-              <a href="http://zupply.me/index.php/csmarketplace/vproducts/new/?type=simple">| Vender </a>    
+
+
+                          <div id="menu_3"><a href="http://zupply.me/index.php/csmarketplace/vproducts/new/?type=simple">| Vender </a></div>
 
 <?php     if(Mage::getSingleton('customer/session')->isLoggedIn()){ ?>
-              <a href="<?php echo Mage::getUrl('customer/account/logout'); ?>">| Cerrar sesión </a>  
+                          <div id="menu_4"><a href="<?php echo Mage::getUrl('customer/account/logout'); ?>">| Cerrar sesión </a></div>
 <?php } ?>
-              <a href="http://zupply.me/index.php/faqs">| FAQ's</a>  
+                          <div id="menu_5"><a href="http://zupply.me/index.php/faqs">| FAQ's</a></div>
 
 
              </div>
