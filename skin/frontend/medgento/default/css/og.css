@@ -381,6 +381,17 @@ float: left;
 .sidebar * { font-family: Arial !important; }
 .sidebar h3 { font-weight: bold; font-size: 16px; }
 
+#aceptamos-tarjetas {
+    font-weight: 100 !important;
+    font-size: 13px !important;
+    font-family: 'Roboto', sans-serif !important;
+    background-image: url(http://zupply.me/media/wysiwyg/tienda/aceptamos-tarjetas.png) !important;
+    background-size: 12% !important;
+    background-repeat: no-repeat !important;
+    padding-left: 29px !important;
+    background-position-y: -5px !important;
+}
+
 #beneficios-tienda {
     max-width: 1150px;
     width: 100%;
