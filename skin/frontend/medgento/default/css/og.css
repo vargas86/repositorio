@@ -380,3 +380,15 @@ float: left;
 
 .sidebar * { font-family: Arial !important; }
 .sidebar h3 { font-weight: bold; font-size: 16px; }
+
+#beneficios-tienda {
+    max-width: 1150px;
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+}
+
+#borde-beneficios-tienda {
+    border-top: 2px solid #ff7800;
+    padding-top: 30px;
+}

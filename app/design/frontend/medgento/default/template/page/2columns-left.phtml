@@ -54,8 +54,8 @@
     </div>
 </div>
 <!-- /////////////////////////// BENEFICIOS ////////////////////////////////// -->
-<div id="home-images-text">
-
+<div id="beneficios-tienda">
+    <div id="borde-beneficios-tienda">
 	<!-- BENEFICIOS 1 -->
 	<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('beneficios-1')->toHtml()?>
 	<!-- BENEFICIOS 2 -->
@@ -63,6 +63,7 @@
 	<!-- BENEFICIOS 3 -->
 	<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('beneficios-3')->toHtml()?>
 	<br /><br /><br /><br />
+    </div>
 </div>
 <?php echo $this->getChildHtml('footer') ?>
 <?php echo $this->getChildHtml('before_body_end') ?>
