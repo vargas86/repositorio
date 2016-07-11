@@ -392,6 +392,16 @@ float: left;
     background-position-y: -5px !important;
 }
 
+#comprar-por {
+    font-weight: 100 !important;
+    font-size: 13px !important;
+    font-family: 'Roboto', sans-serif !important;
+    background-size: 12% !important;
+    background: url(http://zupply.me/media/wysiwyg/tienda/aceptamos-tarjetas.png) no-repeat !important;
+    padding-left: 29px !important;
+    background-position-y: -5px !important;
+}
+
 #beneficios-tienda {
     max-width: 1150px;
     width: 100%;
