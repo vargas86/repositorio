@@ -227,10 +227,11 @@
 
 <default> <!--Barra Lateral -->
 <reference name="left">
-<block type="catalog/navigation" name="catalog.leftnav" template="catalog/navigation/left.phtml" />
-<!-- block type="cms/block" name="Tarjetas" -->
-<!-- action method="setBlockId"><block_id>tarjetas</block_id></action -->
-</block>
+<!-- Aqui esta la clave para el login-->
+<!--block type="catalog/navigation" name="catalog.leftnav" template="catalog/navigation/left.phtml" /-->
+<!--block type="cms/block" name="Tarjetas" >
+<action method="setBlockId"><block_id>tarjetas</block_id></action>
+</block-->
 </reference>
 </default>
 
