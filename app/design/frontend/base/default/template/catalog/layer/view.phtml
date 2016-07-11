@@ -33,6 +33,7 @@
 ?>
 <?php if($this->canShowBlock()): ?>
 <div class="block block-layered-nav">
+    <div>prueba</div>
     <div class="block-title">
         <strong><span><?php echo $this->__('Shop By') ?></span></strong>
     </div>
@@ -41,6 +42,7 @@
         <?php if ($this->getLayer()->getState()->getFilters()): ?>
             <div class="actions"><a href="<?php echo $this->getClearUrl() ?>"><?php echo $this->__('Clear All') ?></a></div>
         <?php endif; ?>
+
         <?php if($this->canShowOptions()): ?>
             <p class="block-subtitle"><?php echo $this->__('Shopping Options') ?></p>
             <dl id="narrow-by-list">
