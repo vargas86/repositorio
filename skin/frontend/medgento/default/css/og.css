@@ -390,6 +390,7 @@ float: left;
     background-repeat: no-repeat !important;
     padding-left: 29px !important;
     background-position-y: -5px !important;
+    text-transform: uppercase;
 }
 
 #comprar-por {
@@ -397,9 +398,11 @@ float: left;
     font-size: 13px !important;
     font-family: 'Roboto', sans-serif !important;
     background-size: 12% !important;
-    background: url(http://zupply.me/media/wysiwyg/tienda/aceptamos-tarjetas.png) no-repeat !important;
+    background-image: url(http://zupply.me/media/wysiwyg/tienda/comprar-por.png) !important;
+    background-repeat: no-repeat !important;
     padding-left: 29px !important;
     background-position-y: -5px !important;
+    text-transform: uppercase;
 }
 
 #beneficios-tienda {
@@ -412,4 +415,9 @@ float: left;
 #borde-beneficios-tienda {
     border-top: 2px solid #ff7800;
     padding-top: 30px;
+}
+
+#borde-filtros {
+    border-bottom: 2px solid #ff7800;
+    padding-bottom: 10px;
 }

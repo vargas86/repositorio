@@ -33,10 +33,10 @@
 ?>
 <?php if($this->canShowBlock()): ?>
 <div class="block block-layered-nav">
-    <div>
+    <div id="borde-filtros">
         <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('tarjetas')->toHtml()?>
     </div>
-    <div class="block-title">
+    <div class="block-title" id="borde-filtros">
         <strong><span><h3 id="comprar-por"><?php echo $this->__('Shop By') ?></h3></span></strong>
     </div>
     <div class="block-content">
