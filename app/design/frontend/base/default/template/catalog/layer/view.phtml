@@ -36,7 +36,8 @@
     <div id="borde-filtros">
         <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('tarjetas')->toHtml()?>
     </div>
-    <div class="block-title" id="borde-filtros">
+    <div id="borde-filtros">
+    <div class="block-title">
         <strong><span><h3 id="comprar-por"><?php echo $this->__('Shop By') ?></h3></span></strong>
     </div>
     <div class="block-content">
@@ -59,6 +60,8 @@
             <script type="text/javascript">decorateDataList('narrow-by-list')</script>
         <?php endif; ?>
     </div>
+    </div>
+    <br>
     <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('publicidad-uno')->toHtml()?>
     <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('publicidad-dos')->toHtml()?>
     <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('publicidad-tres')->toHtml()?>

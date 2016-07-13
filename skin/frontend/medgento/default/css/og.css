@@ -421,3 +421,15 @@ float: left;
     border-bottom: 2px solid #ff7800;
     padding-bottom: 10px;
 }
+
+dt.odd {
+    background-image:url(http://zupply.me/media/wysiwyg/tienda/categoria.png) !important;
+    background-size:8% !important;
+    background-repeat:no-repeat !important;
+    background-position:0px 3px !important;
+    height:50px !important;
+    padding-left:19px;
+    margin-left:10px !important;
+    font-weight:100 !important;
+    font-family: 'Roboto', sans-serif !important;
+}
