@@ -33,14 +33,19 @@
 ?>
 <?php if($this->canShowBlock()): ?>
 <div class="block block-layered-nav">
+    <div id="borde-filtros">
+        <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('tarjetas')->toHtml()?>
+    </div>
+    <div id="borde-filtros">
     <div class="block-title">
-        <strong><span><?php echo $this->__('Shop By') ?></span></strong>
+        <strong><span><h3 id="comprar-por"><?php echo $this->__('Shop By') ?></h3></span></strong>
     </div>
     <div class="block-content">
         <?php echo $this->getStateHtml() ?>
         <?php if ($this->getLayer()->getState()->getFilters()): ?>
             <div class="actions"><a href="<?php echo $this->getClearUrl() ?>"><?php echo $this->__('Clear All') ?></a></div>
         <?php endif; ?>
+
         <?php if($this->canShowOptions()): ?>
             <p class="block-subtitle"><?php echo $this->__('Shopping Options') ?></p>
             <dl id="narrow-by-list">
@@ -55,5 +60,10 @@
             <script type="text/javascript">decorateDataList('narrow-by-list')</script>
         <?php endif; ?>
     </div>
+    </div>
+    <br>
+    <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('publicidad-uno')->toHtml()?>
+    <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('publicidad-dos')->toHtml()?>
+    <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('publicidad-tres')->toHtml()?>
 </div>
 <?php endif; ?>
