@@ -5,47 +5,47 @@
 ?>
 <div id="loading-overlay"></div>
 <script>
-jQuery(window).load(function(){ jQuery('#loading-overlay').fadeOut(250);   }); 
+    jQuery(window).load(function(){ jQuery('#loading-overlay').fadeOut(250);   });
 </script>
-<div class="header-row og_shadow"> 
-	<div class="header-container">
-		<div class="header-top">
-			<?php //echo $this->getChildHtml('store_language') ?>
-			 <?php /* if ($this->getIsHomePage()):  ?>
+<div class="header-row og_shadow">
+    <div class="header-container">
+        <div class="header-top">
+            <?php //echo $this->getChildHtml('store_language') ?>
+            <?php /* if ($this->getIsHomePage()):  ?>
         <h1 class="logo"><strong><?php echo $this->getLogoAlt() ?></strong><a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a></h1>
         <?php  else: */ ?>
-        <div>
-        <a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><img src="http://zupply.me/media/z_logo_blanco.png" alt="<?php echo $this->getLogoAlt() ?>" /></a>
-            <?php if ($this->getIsHomePage()){  ?>
+            <div>
+                <a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><img src="http://zupply.me/media/z_logo_blanco.png" alt="<?php echo $this->getLogoAlt() ?>" /></a>
+                <?php if ($this->getIsHomePage()){  ?>
 
-                <h2 style="color:#FFF; float: left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MUEVE TUS STOCKS.</h2>
-                <!-- Prueba -->
+                    <h2 style="color:#FFF; float: left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MUEVE TUS STOCKS.</h2>
+                    <!-- Prueba -->
 
-            <?php } ?>
+                <?php } ?>
 
-        </div>
-        <?php //endif ?>
-         
+            </div>
+            <?php //endif ?>
+
             <?php //echo $this->getChildHtml('topLinks') ?>
             <div id="menu_superior">
 
-                          <a href="http://zupply.me/index.php/csmarketplace/vproducts/new/?type=simple"><div id="menu_3">Vender | </div></a>
+                <a href="http://zupply.me/index.php/csmarketplace/vproducts/new/?type=simple"><div id="menu_3">Vender | </div></a>
 
-<?php     if(!Mage::getSingleton('customer/session')->isLoggedIn()){ ?>
+                <?php     if(!Mage::getSingleton('customer/session')->isLoggedIn()){ ?>
 
-                          <a href="http://zupply.me/index.php/csmarketplace/account/create/"><div id="menu_1">Quiero ser proveedor | </div></a>
-                          <a href="http://zupply.me/index.php/customer/account/login/"><div id="menu_2">Iniciar sesión </div></a>
-<?php } ?>
-
-
-<?php     if(Mage::getSingleton('customer/session')->isLoggedIn()){ ?>
-                          <div id="menu_4"><a href="<?php echo Mage::getUrl('customer/account/logout'); ?>">Cerrar sesión </a></div>
-<?php } ?>
-                          <a href="http://zupply.me/index.php/faqs"><div id="menu_5">| &nbsp;FAQ's</div></a>
+                    <a href="http://zupply.me/index.php/csmarketplace/account/create/"><div id="menu_1">Quiero ser proveedor | </div></a>
+                    <a href="http://zupply.me/index.php/customer/account/login/"><div id="menu_2">Iniciar sesión </div></a>
+                <?php } ?>
 
 
-             </div>
-<!--
+                <?php     if(Mage::getSingleton('customer/session')->isLoggedIn()){ ?>
+                    <div id="menu_4"><a href="<?php echo Mage::getUrl('customer/account/logout'); ?>">Cerrar sesión </a></div>
+                <?php } ?>
+                <a href="http://zupply.me/index.php/faqs"><div id="menu_5">| &nbsp;FAQ's</div></a>
+
+
+            </div>
+            <!--
        <?php if ($this->getIsHomePage()){  ?>
 
                   <h2 style="color:#FFF; float: left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MUEVE TUS STOCKS.</h2>
@@ -54,34 +54,34 @@ jQuery(window).load(function(){ jQuery('#loading-overlay').fadeOut(250);   });
 -->
             <div class="quick-access">
 
-            <?php echo $this->getChildHtml('topSearch') ?>
+                <?php echo $this->getChildHtml('topSearch') ?>
             </div>
-		</div>
-	</div>
-    
-    <?php if ($this->getIsHomePage()){  ?>
-    <div id="tarjetas" class="nomobile">
-        <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('aviso-formas-de-pago')->toHtml()?>
-      <!-- div class="header-container">
-      <p>Aceptamos todas las tarjetas de crédito, débito, depósito, transferencia o pago en efectivo.&nbsp;&nbsp;&nbsp;&nbsp;</p> 
-      <img style="float: right; margin-top: 8px;" class="tarjeta_header" src ="http://zupply.me/media/images_home/tarjetas/visaMaster.png" />
-
-      </div -->
+        </div>
     </div>
+
+    <?php if ($this->getIsHomePage()){  ?>
+        <div id="tarjetas" class="nomobile">
+            <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('aviso-formas-de-pago')->toHtml()?>
+            <!-- div class="header-container">
+            <p>Aceptamos todas las tarjetas de crédito, débito, depósito, transferencia o pago en efectivo.&nbsp;&nbsp;&nbsp;&nbsp;</p>
+            <img style="float: right; margin-top: 8px;" class="tarjeta_header" src ="http://zupply.me/media/images_home/tarjetas/visaMaster.png" />
+
+            </div -->
+        </div>
     <?php } ?>
 
-</div>	
+</div>
 <div class="container">
     <div class="header">
-       
-       
+
+
         <?php echo $this->getChildHtml('topContainer'); ?>
     </div>
 </div>
 <?php echo $this->getChildHtml('topMenu') ?>
 <script type="text/javascript">
-(function($){jQuery.fn.replaceText=function(b,a,c){return this.each(function(){var f=this.firstChild,g,e,d=[];if(f){do{if(f.nodeType===3){g=f.nodeValue;e=g.replace(b,a);if(e!==g){if(!c&&/</.test(e)){$(f).before(e);d.push(f)}else{f.nodeValue=e}}}}while(f=f.nextSibling)}d.length&&$(d).remove()})}})(jQuery);
-jQuery(window).load(function(){
-jQuery("body *").replaceText( /Details/gi, "Descripción del producto" );
-});
+    (function($){jQuery.fn.replaceText=function(b,a,c){return this.each(function(){var f=this.firstChild,g,e,d=[];if(f){do{if(f.nodeType===3){g=f.nodeValue;e=g.replace(b,a);if(e!==g){if(!c&&/</.test(e)){$(f).before(e);d.push(f)}else{f.nodeValue=e}}}}while(f=f.nextSibling)}d.length&&$(d).remove()})}})(jQuery);
+    jQuery(window).load(function(){
+        jQuery("body *").replaceText( /Details/gi, "Descripción del producto" );
+    });
 </script>
