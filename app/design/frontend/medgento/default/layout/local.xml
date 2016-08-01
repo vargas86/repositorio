@@ -8,7 +8,7 @@
 			</action>
 		</reference>
 	</remove_paypal_logo>
-  
+
 
 	<remove_callouts>
 		<reference name="left">
@@ -53,21 +53,21 @@
 				<action method="addLink" translate="label" module="customer">
 					<name>account</name><path>customer/account/</path><label>Account Dashboard</label>
 				</action>
-                <action method="addLink" translate="label" module="customer">
-                	<name>account_edit</name><path>customer/account/edit/</path><label>Account Information</label>
-                </action>
-                <action method="addLink" translate="label" module="customer">
-                	<name>address_book</name><path>customer/address/</path><label>Address Book</label>
-                </action>
-                <action method="addLink" translate="label" module="sales">
-                	<name>orders</name><path>sales/order/history/</path><label>My Orders</label>
-                </action>
-                <action method="addLink" translate="label" module="downloadable">
-                	<name>downloadable_products</name><path>downloadable/customer/products</path><label>My Downloadable Products</label>
-                </action>
-                <action method="addLink" translate="label" module="newsletter">
-                	<name>newsletter</name><path>newsletter/manage/</path><label>Newsletter Subscriptions</label>
-                </action>	
+				<action method="addLink" translate="label" module="customer">
+					<name>account_edit</name><path>customer/account/edit/</path><label>Account Information</label>
+				</action>
+				<action method="addLink" translate="label" module="customer">
+					<name>address_book</name><path>customer/address/</path><label>Address Book</label>
+				</action>
+				<action method="addLink" translate="label" module="sales">
+					<name>orders</name><path>sales/order/history/</path><label>My Orders</label>
+				</action>
+				<action method="addLink" translate="label" module="downloadable">
+					<name>downloadable_products</name><path>downloadable/customer/products</path><label>My Downloadable Products</label>
+				</action>
+				<action method="addLink" translate="label" module="newsletter">
+					<name>newsletter</name><path>newsletter/manage/</path><label>Newsletter Subscriptions</label>
+				</action>
 			</block>
 		</reference>
 	</update_account_navigation>
@@ -85,7 +85,7 @@
 			<action method="unsetChild">
 				<block>footer_links</block>
 			</action>
-		</reference>	
+		</reference>
 	</update_footer_links>
 
 	<remove_product_type_options>
@@ -93,7 +93,7 @@
 			<!--<remove name="product.info.options.wrapper"/>-->
 		</reference>
 	</remove_product_type_options>
-	<!--LESS Approach-->	
+	<!--LESS Approach-->
 	<default>
 		<update handle="remove_callouts" />
 		<update handle="remove_polls" />
@@ -102,8 +102,8 @@
 		<update handle="update_footer_links" />
 
 
- <remove name="left.newsletter"/>
-   <remove name="right.reports.product.compared"/>
+		<remove name="left.newsletter"/>
+		<remove name="right.reports.product.compared"/>
 
 		<reference name="head">
 			<block type="core/text" name="jQuery.noConflict">
@@ -119,8 +119,8 @@
 				<type>skin_js</type>
 				<item>js/jquery-1.10.2.js</item>
 			</action>
-			
-			
+
+
 			<action method="addItem">
 				<type>skin_js</type>
 				<item>js/lightbox/lightbox-2.6.min.js</item>
@@ -151,7 +151,7 @@
 			<action method="addItem">
 				<type>skin_css</type>
 				<item>css/og.css</item>
-			</action>	
+			</action>
 
 		</reference>
 		<reference name="before_body_end">
@@ -191,49 +191,49 @@
 	<customer_account>
 		<update handle="update_account_navigation" />
 	</customer_account>
- <contacts_index_index>
-        <reference name="root">
-            <action method="setTemplate"><template>page/1column.phtml</template></action>    
-        </reference>
- </contacts_index_index>
+	<contacts_index_index>
+		<reference name="root">
+			<action method="setTemplate"><template>page/1column.phtml</template></action>
+		</reference>
+	</contacts_index_index>
 	<!--PRODUCT_TYPE_downloadable>
 		<reference name="product.info.options.wrapper">
 			 <action method="unsetChild"><block>product.info.downloadable.options</block></action>
 		</reference>
 	</PRODUCT_TYPE_downloadable-->
-<checkout_cart_index>
-    <remove name="checkout.cart.shipping" />
-</checkout_cart_index>
+	<checkout_cart_index>
+		<remove name="checkout.cart.shipping" />
+	</checkout_cart_index>
 
-<checkout_cart_index>
-        <reference name="content">
-            <remove name="checkout.cart.coupon"/>
-        </reference>
-</checkout_cart_index>
+	<checkout_cart_index>
+		<reference name="content">
+			<remove name="checkout.cart.coupon"/>
+		</reference>
+	</checkout_cart_index>
 
-<catalog_product_view>
-    <reference name="root">
-        <action method="setTemplate"><template>page/2columns-left.phtml</template></action>
-    </reference>
-</catalog_product_view>
-
-
- 	<catalogsearch_result_index>
-     <reference name="root">
-        <action method="setTemplate"><template>page/2columns-left.phtml</template></action>
-    </reference>
-	 </catalogsearch_result_index>
+	<catalog_product_view>
+		<reference name="root">
+			<action method="setTemplate"><template>page/2columns-left.phtml</template></action>
+		</reference>
+	</catalog_product_view>
 
 
-<default> <!--Barra Lateral -->
-<reference name="left">
-<!-- Aqui esta la clave para el login-->
-<!--block type="catalog/navigation" name="catalog.leftnav" template="catalog/navigation/left.phtml" /-->
-<!--block type="cms/block" name="Tarjetas" >
-<action method="setBlockId"><block_id>tarjetas</block_id></action>
-</block-->
-</reference>
-</default>
+	<catalogsearch_result_index>
+		<reference name="root">
+			<action method="setTemplate"><template>page/2columns-left.phtml</template></action>
+		</reference>
+	</catalogsearch_result_index>
+
+
+	<default> <!--Barra Lateral -->
+		<reference name="left">
+			<!-- Aqui esta la clave para el login-->
+			<!--block type="catalog/navigation" name="catalog.leftnav" template="catalog/navigation/left.phtml" /-->
+			<!--block type="cms/block" name="Tarjetas" >
+            <action method="setBlockId"><block_id>tarjetas</block_id></action>
+            </block-->
+		</reference>
+	</default>
 
 
 </layout>
