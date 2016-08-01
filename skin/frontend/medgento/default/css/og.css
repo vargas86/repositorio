@@ -381,9 +381,6 @@ float: left;
 .sidebar * { font-family: Arial !important; }
 .sidebar h3 { font-weight: bold; font-size: 16px; }
 
-<<<<<<< HEAD
-/* PRUEBA GIT HUB */
-=======
 #aceptamos-tarjetas {
     font-weight: 100 !important;
     font-size: 13px !important;
@@ -426,14 +423,75 @@ float: left;
 }
 
 dt.odd {
-    background-image:url(http://zupply.me/media/wysiwyg/tienda/categoria.png) !important;
-    background-size:8% !important;
+    background-image: url(http://zupply.me/media/wysiwyg/tienda/categoria.png) !important;
+    background-size: 14% !important;
+    background-repeat: no-repeat !important;
+    background-position: 0px 5px !important;
+    height: 29px !important;
+    padding-left: 25px;
+    margin-left: 10px !important;
+    font-weight: 100 !important;
+    font-family: 'Roboto', sans-serif !important;
+    border-bottom: thin dotted rgba(185, 185, 185, 0.88);
+    margin-bottom: 10px !important;
+    width: 105px;
+}
+
+dt.last.even {
+    background-image:url(http://zupply.me/media/wysiwyg/tienda/precio.png) !important;
+    background-size:14% !important;
     background-repeat:no-repeat !important;
-    background-position:0px 3px !important;
-    height:50px !important;
-    padding-left:19px;
+    background-position:0px 2px !important;
+    height:30px !important;
+    padding-left:25px;
     margin-left:10px !important;
     font-weight:100 !important;
     font-family: 'Roboto', sans-serif !important;
+    border-bottom: thin dotted rgba(185, 185, 185, 0.88);
+    margin-bottom: 10px !important;
+    width: 105px;
 }
->>>>>>> origin/master
+
+#filtro-estilos {
+    color:purple !important;
+}
+
+dd.last.even ol li a span.price {
+    color:#848484 !important;
+    font-size:13px;
+    font-weight:400 !important;
+    font-family: 'Roboto', sans-serif !important;
+}
+
+dd.last.even ol li a  {
+    color:#A4A4A4 !important;
+    font-size:13px;
+    font-weight:100 !important;
+    padding-right:5px;
+    font-family: 'Roboto', sans-serif !important;
+}
+
+dd.last.even ol li  {
+    color:#ff7800 !important;
+    font-size:14px;
+    font-weight:600 !important;
+    padding-left:29px;
+    font-family: 'Roboto', sans-serif !important;
+
+
+}
+
+dd.odd ol li a  {
+    color:#848484 !important;
+    font-size:16px;
+    font-weight:400 !important;
+    padding-right:5px;
+    font-family: 'Roboto', sans-serif !important;
+}
+
+dd.odd ol li  {
+    color:#ff7800 !important;
+    font-size:14px;
+    font-weight:600 !important;
+    padding-left:29px;
+    font-family: 'Roboto', sans-serif !important;
