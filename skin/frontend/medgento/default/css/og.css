@@ -215,7 +215,7 @@ div.f-column-title2 { margin-top: 10px; margin-bottom: 15px; height: 10px;}
 #home-images-text { max-width: 100%; width: auto; overflow: hidden; margin: 0 auto; display: inline-block;}
 .home-images-text-block { float: left; width: 33%; margin-bottom: 40px; padding-right: 6%; }
 .home-images-text-image { float: left; width: 30%;  padding-left:10%;  }
-.home-images-text-text { float: left; width: 70%; font-size: 12px; overflow: hidden; padding-left: 5%; text-align: justify; font-weight: 100 !important; color: #151414; }
+.home-images-text-text {float: left;width: 70%;font-size: 13px;overflow: hidden;padding-left: 5%;text-align: justify;font-weight: 400 !important;color: #4c4c4c;}
 .cms-home  img { max-width: 100%; height: auto; }
 .toolbar .pager { display: none;  }
 .toolbar-bottom .toolbar .pager { display: block;  }
