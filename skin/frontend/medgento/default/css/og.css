@@ -557,5 +557,9 @@ div.product-img-box .more-views h2 {
 }
 
 #mas-vistas-ficha {
-    font-weight: 400 !important;
+    font-weight: 500;
+    color: rgba(102, 102, 102, 0.62);
+    font-size: 12px !important;
+    text-transform: uppercase;
+    padding-bottom: 4px;
 }
