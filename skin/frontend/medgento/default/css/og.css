@@ -233,6 +233,23 @@ div.f-column-title2 { margin-top: 10px; margin-bottom: 15px; height: 10px;}
 .add-to-cart .input-group { max-width: 250px; }
 .add-to-cart .input-group #qty { max-width: 50px; }
 
+div.input-group span.input-group-btn button.btn.btn-default.btn-cart span span {
+    color: #ffffff !important;
+    font-size: 14px !important;
+    background-image:none !important;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif !important;
+    text-transform: uppercase;
+}
+
+div.input-group span.input-group-btn button.btn.btn-default.btn-cart {
+    background-image:none;
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
+    width: 159px;
+    margin-left: 10px;
+}
+
 .product-view .product-essential .product-img-box { width: 40% !important; }
 .product-view .product-essential .product-shop { width: 60% !important; }
 #tarjetas { width: 100%; height: 35px; background: #FFF; display: block; position: relative;  }
