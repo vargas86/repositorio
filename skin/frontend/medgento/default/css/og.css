@@ -231,7 +231,7 @@ div.f-column-title2 { margin-top: 10px; margin-bottom: 15px; height: 10px;}
 /* PRODUCTO */
 /* */
 .add-to-cart .input-group { max-width: 250px; }
-.add-to-cart .input-group #qty { max-width: 50px; }
+.add-to-cart .input-group #qty { min-width: 75px; padding-left: 10px !important; padding-right: 10px !important;}
 
 div.input-group span.input-group-btn button.btn.btn-default.btn-cart span span {
     color: #ffffff !important;
