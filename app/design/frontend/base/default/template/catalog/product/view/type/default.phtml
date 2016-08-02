@@ -36,3 +36,5 @@
 <?php endif; ?>
 <?php echo $this->getChildHtml('product_type_data_extra') ?>
 <!--?php echo $this->getPriceHtml($_product) ?-->
+<br>
+<div id="formas-pago-ficha"><?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('tarjetas-ficha-producto')->toHtml()?></div>
