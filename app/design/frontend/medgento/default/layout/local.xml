@@ -153,6 +153,12 @@
 				<item>css/og.css</item>
 			</action>
 
+
+			<action method="addItem">
+				<type>skin_css</type>
+				<item>css/menu-mobile.css</item>
+			</action>
+
 		</reference>
 		<reference name="before_body_end">
 			<block type="core/template" name="global_js" template="page/html/globalJS.phtml"/>

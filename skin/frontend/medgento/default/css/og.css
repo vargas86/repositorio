@@ -76,6 +76,12 @@ a.enlaces_home { color: #6d6e71 !important; text-decoration: none; }
 #menu_4 { margin: 20px 0px 0px 9px; float: left; width: 108px; background-image: url(http://zupply.me/media/wysiwyg/home/inicio.png); background-repeat: no-repeat; background-size: 17%; background-position-x: 89px; background-position-y: center; font-weight: 300; }
 #menu_5 { margin: 20px 0px 0px 9px; float: left; /* background-color: red; */ width: 73px; background-image: url(http://zupply.me/media/wysiwyg/home/faq.png); background-repeat: no-repeat; background-size: 31%; background-position-x: 47px; background-position-y: center; font-weight: 300; }
 
+#menu-mobile-only {display:none;}
+
+@media  only screen and (max-width: 500px) and (min-width: 0px) {
+    #menu-mobile-only { display: block; }
+}
+
 .foooter { background: #f9f9f9; width: 100% !important; margin-top: 50px; }
 .footer p, .footer p a { text-align: center !important; width: 100% !important; color:#FFF !important; font-size: 12px;  }
 .footer p { margin: 0 auto !important; display: block !important; }
@@ -344,6 +350,13 @@ div.input-group span.input-group-btn button.btn.btn-default.btn-cart {
 .thumbnail .caption { padding:none !important; }
 .thumbnail, .caption { color:#ff7800 !important; font-weight: bold !important; }
 .price { color: #ff7800 !important; font-weight: 100 !important; font-size: 40px; float: left; padding-right: 10%; }
+
+div.caption .price-box span.regular-price span.price {
+    /*color:red !important;*/
+    font-size:20px;
+    font-weight:400 !important;
+}
+
 .product-name a { color:#484848 !important; font-size: 16px; font-weight: bold; }
 .featured-products h2.product-name, .products-grid h2.product-name { min-height: 0 !important; }
 .thumbnail h2 { margin:0 !important; }
@@ -563,3 +576,4 @@ div.product-img-box .more-views h2 {
     text-transform: uppercase;
     padding-bottom: 4px;
 }
+
