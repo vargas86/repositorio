@@ -14,6 +14,11 @@
             <?php /* if ($this->getIsHomePage()):  ?>
         <h1 class="logo"><strong><?php echo $this->getLogoAlt() ?></strong><a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a></h1>
         <?php  else: */ ?>
+
+            <div id="menu-mobile-only"> <!-- Menu Mobile -->
+                <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('menu-mobile')->toHtml()?>
+            </div> <!-- Menu Mobile -->
+
             <div>
                 <a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><img src="http://zupply.me/media/z_logo_blanco.png" alt="<?php echo $this->getLogoAlt() ?>" /></a>
                 <?php if ($this->getIsHomePage()){  ?>
@@ -46,9 +51,9 @@
 
             </div>
 
-            <div id="menu-mobile-only"> <!-- Menu Mobile -->
+            <!-- div id="menu-mobile-only"> <!-- Menu Mobile -->
                 <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('menu-mobile')->toHtml()?>
-            </div> <!-- Menu Mobile -->
+            <!-- /div> <!-- Menu Mobile -->
             <!--
        <?php if ($this->getIsHomePage()){  ?>
 
