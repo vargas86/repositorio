@@ -67,8 +67,14 @@ a.enlaces_home { color: #6d6e71 !important; text-decoration: none; }
 .quick-access { max-width: 50%; margin: 10px 20px; padding: 0 20px; float: left;
 }
 
-#menu_superior {  /*margin: 20px 0px;*/ float: right; }
+#menu_superior {  /*margin: 20px 0px;*/ float: right; display:block; }
 #menu_superior a {  margin:0 2px; font-size: 14px; color:#FFF;}
+#menu-mobile-only {display:none;}
+
+@media  only screen and (max-width: 500px) and (min-width: 0px) {
+    #menu-mobile-only { display: block; }
+    #menu_superior {display:none;}
+}
 
 #menu_1 { margin: 20px 0px 0px 9px; float: left; width: 141px; font-weight: 300; }
 #menu_2 { margin: 20px 0px 0px 9px; float: left; width: 105px; background-image: url(http://zupply.me/media/wysiwyg/home/inicio.png); background-repeat: no-repeat; background-size: 15%; background-position-x: 88px; background-position-y: center; font-weight: 300; }
@@ -76,11 +82,7 @@ a.enlaces_home { color: #6d6e71 !important; text-decoration: none; }
 #menu_4 { margin: 20px 0px 0px 9px; float: left; width: 108px; background-image: url(http://zupply.me/media/wysiwyg/home/inicio.png); background-repeat: no-repeat; background-size: 17%; background-position-x: 89px; background-position-y: center; font-weight: 300; }
 #menu_5 { margin: 20px 0px 0px 9px; float: left; /* background-color: red; */ width: 73px; background-image: url(http://zupply.me/media/wysiwyg/home/faq.png); background-repeat: no-repeat; background-size: 31%; background-position-x: 47px; background-position-y: center; font-weight: 300; }
 
-#menu-mobile-only {display:none;}
 
-@media  only screen and (max-width: 500px) and (min-width: 0px) {
-    #menu-mobile-only { display: block; }
-}
 
 .foooter { background: #f9f9f9; width: 100% !important; margin-top: 50px; }
 .footer p, .footer p a { text-align: center !important; width: 100% !important; color:#FFF !important; font-size: 12px;  }
