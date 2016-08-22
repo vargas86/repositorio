@@ -100,10 +100,10 @@ body {
 
 .side-menu li a.active {
     background: #ffffff none repeat scroll 0 0;
-    color: #fff !important;
+    color: #424242 !important;
 }
 .side-menu > li > a.active {
-    border-left: 2px solid #3c8dbc !important;;
+  border-right: 2px solid #3c8dbc !important;;
 	padding: 10px 11px;
 }
 .side-menu > li > a.active > .fa.arrow {
