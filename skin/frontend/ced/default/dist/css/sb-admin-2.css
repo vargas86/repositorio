@@ -5,7 +5,7 @@
  */
 
 body {
-    background-color: #222D32;
+    background-color: #ffffff;
 }
 
 #wrapper {
@@ -99,11 +99,11 @@ body {
 } */
 
 .side-menu li a.active {
-    background: #1e282c none repeat scroll 0 0;
+    background: #ffffff none repeat scroll 0 0;
     color: #fff !important;
 }
 .side-menu > li > a.active {
-    border-left: 4px solid #3c8dbc !important;;
+    border-left: 2px solid #3c8dbc !important;;
 	padding: 10px 11px;
 }
 .side-menu > li > a.active > .fa.arrow {

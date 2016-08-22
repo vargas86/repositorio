@@ -233,7 +233,7 @@ nav.navbar-default.navbar-static-top{
 }
 
 .navbar-default.sidebar{
-	 background-color: #222D32 !important;
+	  background-color: #ffffff !important;
     border-color: #222D32 !important;
 }
 /*
@@ -351,7 +351,9 @@ nav.navbar-default.navbar-static-top{
     width: 45px;
 }
 .user-panel > .info > a , .user-panel > .pull-left.info > p {
-    color: #fff !important;
+    color: #424242 !important;
+		font-family: 'Roboto', sans-serif !important;
+		font-weight: 400;
 }
 .input-group-addon{
 	font-weight:bold;
@@ -436,7 +438,7 @@ label.label > label{
 @media screen and (max-width: 991px) {
 	.order-info-wrap .order-info h3 {
     margin: 0;
-}	
+}
 .order-info-box_custom {
     margin-bottom: 15px;
     width: 100%;
@@ -466,7 +468,7 @@ label.label > label{
 }
 
 .nicEdit-main{
-	height:70px;	
+	height:70px;
 }
 #djDebugPanelList{
 	padding-left:0px;
@@ -478,7 +480,7 @@ label.label > label{
 	z-index:1;
 }
 .navbar-static-top{
-	
+
 }
 .panel-min-height .form-group .form-group{
   min-height: 0px!important;
@@ -504,4 +506,22 @@ ul.messages li ul li span{
 
 @media (min-width: 769px) {
 .container { width:95% !important; max-width: 95%; }
+}
+
+div.sidebar-nav.navbar-collapse ul#side-menu.nav.side-menu.in li a span {
+	color:#424242 !important;
+}
+
+div.sidebar-nav.navbar-collapse div.user-panel div.pull-left.info {
+	text-align: right;
+	width: 100%;
+}
+
+div.sidebar-nav.navbar-collapse div.user-panel div.pull-left.image img.img-circle {
+    width: 75px !important;
+    height: 75px !important;
+    text-align: right !important;
+    float: right !important;
+    left: 47px !important;
+    margin-left: 153px;
 }
