@@ -120,6 +120,11 @@
 				<item>js/jquery-1.10.2.js</item>
 			</action>
 
+						<!-- Scripts para Iphone wheel select -->
+						<action method="addItem">
+							<type>skin_css</type>
+							<item>css/drum.min.css</item>
+						</action>
 
 			<action method="addItem">
 				<type>skin_js</type>
