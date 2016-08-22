@@ -1,4 +1,4 @@
-<?xml version="1.0"?> 
+<?xml version="1.0"?>
 
 <!--
 /**
@@ -37,7 +37,7 @@ Supported layout update handles (special):
 			<action method="setTemplate"><template>page/empty.phtml</template></action>
 		</reference>
 	</customer_jquery_update_layout>
-	
+
 	<!-- Layout for customer login page -->
     <csmarketplace_account_login translate="label">
         <label>Vendor Account Login Form</label>
@@ -57,7 +57,7 @@ Supported layout update handles (special):
          	<action method="setTitle" translate="title" module="csmarketplace"><title>Vendor Login</title></action>
         </reference>
     </csmarketplace_account_login>
-	
+
 	<csmarketplace_account_logoutsuccess>
 		<update handle="customer_jquery_update_layout"/>
 		<reference name="content">
@@ -127,7 +127,7 @@ Supported layout update handles (special):
             <action method="setTemplate"><template>customer/form/confirmation.phtml</template></action>
         </reference>
     </csmarketplace_account_confirmation>
-    
+
   <csmarketplace_vendor_approval>
 	  <label>Vendor Account Login Form</label>
 	  <update handle="customer_jquery_update_layout"/>
@@ -143,7 +143,7 @@ Supported layout update handles (special):
 		   </block>
 	  </reference>
  </csmarketplace_vendor_approval>
-	
+
 	<!--
 	Vendor account pages, rendered for all tabs in dashboard
 	-->
@@ -164,7 +164,7 @@ Supported layout update handles (special):
 			 <!--<action method="addCss"><stylesheet>css/ced/csmarketplace/font-awesome/css/font-awesome.min.css</stylesheet></action> -->
 			 <!--<action method="addCss"><stylesheet>css/ced/csmarketplace/vendor.css</stylesheet></action>-->
 		</reference>
-		
+
         <reference name="content">
         	<block type="core/template" name="activity" template="csmarketplace/vendor/activity.phtml"/>
             <block type="page/html_wrapper" name="vendor.dashboard.wrapper" translate="label">
@@ -175,24 +175,24 @@ Supported layout update handles (special):
 
         <reference name="left">
             <block type="csmarketplace/vendor_navigation" name="csmarketplace_vendor_navigation" before="-" template="csmarketplace/vendor/navigation.phtml">
-                <action method="addLink" translate="label" module="csmarketplace"><name>vendor</name><path>csmarketplace/vendor/index</path><label>Dashboard</label><font_awesome>fa fa-dashboard fa-fw</font_awesome><sort_order>10</sort_order></action>
-                <action method="addLink" translate="label" module="csmarketplace"><name>vendor_profile</name><path>csmarketplace/vendor/profileview/</path><label>Vendor Profile</label><font_awesome>fa fa-user fa-fw</font_awesome><sort_order>20</sort_order></action>
-                <action method="addLink" translate="label" module="csmarketplace"><name>vendor_new_products</name><path>csmarketplace/vproducts/new</path><label>New Product</label><font_awesome>fa fa-plus-square fa-fw</font_awesome><sort_order>30</sort_order></action>
-                <action method="addLink" translate="label" module="csmarketplace"><name>vendor_products</name><path>csmarketplace/vproducts/index</path><label>Manage Products</label><font_awesome>fa fa-folder fa-fw</font_awesome><sort_order>40</sort_order></action>
-				<action method="addLink" translate="label" module="csmarketplace"><name>vendor_orders</name><path>csmarketplace/vorders/index</path><label>Orders</label><font_awesome>fa fa-shopping-cart fa-fw</font_awesome><sort_order>50</sort_order></action>
-				<action method="addLink" translate="label" module="csmarketplace"><name>vendor_commissions</name><path>csmarketplace/vpayments/index</path><label>Transactions</label><font_awesome>fa fa-money fa-fw</font_awesome><sort_order>60</sort_order></action>			
+                <action method="addLink" translate="label" module="csmarketplace"><name>vendor</name><path>csmarketplace/vendor/index</path><label>Dashboard</label><!--font_awesome>fa fa-dashboard fa-fw</font_awesome--><sort_order>10</sort_order></action>
+                <action method="addLink" translate="label" module="csmarketplace"><name>vendor_profile</name><path>csmarketplace/vendor/profileview/</path><label>Vendor Profile</label><!--font_awesome>fa fa-user fa-fw</font_awesome--><sort_order>20</sort_order></action>
+                <action method="addLink" translate="label" module="csmarketplace"><name>vendor_new_products</name><path>csmarketplace/vproducts/new</path><label>New Product</label><!--font_awesome>fa fa-plus-square fa-fw</font_awesome--><sort_order>30</sort_order></action>
+                <action method="addLink" translate="label" module="csmarketplace"><name>vendor_products</name><path>csmarketplace/vproducts/index</path><label>Manage Products</label><!--font_awesome>fa fa-folder fa-fw</font_awesome--><sort_order>40</sort_order></action>
+				<action method="addLink" translate="label" module="csmarketplace"><name>vendor_orders</name><path>csmarketplace/vorders/index</path><label>Orders</label><!--font_awesome>fa fa-shopping-cart fa-fw</font_awesome--><sort_order>50</sort_order></action>
+				<action method="addLink" translate="label" module="csmarketplace"><name>vendor_commissions</name><path>csmarketplace/vpayments/index</path><label>Transactions</label><!--font_awesome>fa fa-money fa-fw</font_awesome--><sort_order>60</sort_order></action>
 				<action method="addLink" translate="label" module="csmarketplace">
 				<name>vendor_reports</name>
 				<path>csmarketplace/vreports/</path>
 				<label>Reports</label>
-				<font_awesome>fa fa-bar-chart-o fa-fw</font_awesome>
+				<!--font_awesome>fa fa-bar-chart-o fa-fw</font_awesome-->
 				<sort_order>70</sort_order>
 				<children>
 					<order_reports>
 						<name>order_reports</name>
 						<path>csmarketplace/vreports/vorders</path>
 						<label>Reporte de órdenes</label>
-						<font_awesome>fa fa-angle-double-right</font_awesome>
+						<!--font_awesome>fa fa-angle-double-right</font_awesome-->
 						<sort_order>10</sort_order>
 					</order_reports>
 					<product_reports>
@@ -227,7 +227,7 @@ Supported layout update handles (special):
         </reference>
     </csmarketplace_vendor>
 
-	
+
 	<!--
 	Vendor approval page layout
 	-->
@@ -249,8 +249,8 @@ Supported layout update handles (special):
 			</block>
 		</reference>
 	</csmarketplace_vendor_approval> -->
-	
-	
+
+
 	<!--
 	Vendor home dashboard layout
 	-->
@@ -262,16 +262,16 @@ Supported layout update handles (special):
         <reference name="root">
           <action method="setTemplate"><template>page/vendorpanel.phtml</template></action>
         </reference>
-		
+
 		<reference name="head">
 			 <action method="addJs"><script>ced/csmarketplace/flot/jquery.flot.js</script></action>
 			 <action method="addJs"><script>ced/csmarketplace/flot/jquery.flot.resize.min.js</script></action>
 			 <action method="addJs"><script>ced/csmarketplace/jqvmap/jquery.vmap.js</script></action>
 			 <action method="addJs"><script>ced/csmarketplace/jqvmap/maps/jquery.vmap.world.js</script></action>
 			 <action method="addCss"><stylesheet>css/ced/csmarketplace/jqvmap/jqvmap.css</stylesheet></action>
-			 
+
 		</reference>
-		
+
         <reference name="vendor.dashboard.wrapper">
             <block type="csmarketplace/vendor_dashboard" name="csmarketplace_vendor_dashboard" template="csmarketplace/vendor/dashboard.phtml">
                 <block type="csmarketplace/vendor_dashboard_info" name="csmarketplace_vendor_dashboard_info" as="info" template="csmarketplace/vendor/dashboard/info.phtml"/>
@@ -282,7 +282,7 @@ Supported layout update handles (special):
 			</block>
         </reference>
     </csmarketplace_vendor_index>
-	
+
 	<!--
 	Vendor profile Edit page layout
 	-->
@@ -295,16 +295,16 @@ Supported layout update handles (special):
         </reference>
 		<reference name="head">
 			<action method="addJs"><script>ced/csmarketplace/nicEdit-latest.js</script></action>
-			<action method="addItem"><type>js_css</type><name>calendar/calendar-win2k-1.css</name><params/></action>			 
-			<action method="addItem"><type>js</type><name>calendar/calendar.js</name></action>			 
-			<action method="addItem"><type>js</type><name>calendar/calendar-setup.js</name></action>  
+			<action method="addItem"><type>js_css</type><name>calendar/calendar-win2k-1.css</name><params/></action>
+			<action method="addItem"><type>js</type><name>calendar/calendar.js</name></action>
+			<action method="addItem"><type>js</type><name>calendar/calendar-setup.js</name></action>
 		</reference>
         <reference name="vendor.dashboard.wrapper">
 			<block type="core/html_calendar" name="html_calendar" as="html_calendar" template="page/js/calendar.phtml"/>
             <block type="csmarketplace/vendor_profile_edit" name="vendor_profile_edit" template="csmarketplace/vendor/profile/edit.phtml"/>
         </reference>
     </csmarketplace_vendor_profile>
-	
+
 	<!--
 	Vendor profile View page layout
 	-->
@@ -316,20 +316,20 @@ Supported layout update handles (special):
             <action method="setTemplate"><template>page/vendorpanel.phtml</template></action>
         </reference>
 		<reference name="head">
-			<action method="addItem"><type>js_css</type><name>calendar/calendar-win2k-1.css</name><params/></action>			 
-			<action method="addItem"><type>js</type><name>calendar/calendar.js</name></action>			 
-			<action method="addItem"><type>js</type><name>calendar/calendar-setup.js</name></action> 
+			<action method="addItem"><type>js_css</type><name>calendar/calendar-win2k-1.css</name><params/></action>
+			<action method="addItem"><type>js</type><name>calendar/calendar.js</name></action>
+			<action method="addItem"><type>js</type><name>calendar/calendar-setup.js</name></action>
 		</reference>
         <reference name="vendor.dashboard.wrapper">
 			<block type="core/html_calendar" name="html_calendar" as="html_calendar" template="page/js/calendar.phtml"/>
             <block type="csmarketplace/vendor_profile_view" name="vendor_profile_view" template="csmarketplace/vendor/profile/view.phtml"/>
         </reference>
     </csmarketplace_vendor_profileview>
-   
-   
+
+
 	<!--
 	Vendor products list page layout
-	--> 
+	-->
     <csmarketplace_vproducts_index translate="label">
         <label>Dashboard</label>
         <update handle="csmarketplace_vendor"/>
@@ -343,16 +343,16 @@ Supported layout update handles (special):
 		<reference name="content">
 			<block type="core/template" before="csmarketplace_vendor_vproducts_list" name="vproducts_message" template="csmarketplace/vproducts/message.phtml"/>
 		</reference>
-        <reference name="vendor.dashboard.wrapper">       	
+        <reference name="vendor.dashboard.wrapper">
             <block type="csmarketplace/vproducts" name="csmarketplace_vendor_vproducts_list"  as="product.list" template="csmarketplace/vproducts/list.phtml"/>
         </reference>
     </csmarketplace_vproducts_index>
-    
+
 	<!--
 	Vendor Products filter list page layout
-	--> 
+	-->
     <csmarketplace_vproducts_filter translate="label">
-    
+
          <block type="core/text_list" name="root" output="toHtml">
             <block type="csmarketplace/vproducts" name="csmarketplace_vendor_vproducts_list" as="product.list" template="csmarketplace/vproducts/list.phtml"/>
         </block>
@@ -360,7 +360,7 @@ Supported layout update handles (special):
 
 	<!--
 	Vendor new  product page layout
-	--> 
+	-->
     <csmarketplace_vproducts_new translate="label">
         <label>Dashboard</label>
         <update handle="csmarketplace_vendor"/>
@@ -373,23 +373,23 @@ Supported layout update handles (special):
 			<action method="addCss"><stylesheet>css/ced/csmarketplace/vproducts.css</stylesheet></action>
 		</reference>
     </csmarketplace_vproducts_new>
-	
+
 	 <!--
 	Vendor product type page layout
-	--> 
+	-->
 	<csmarketplace_vproducts_type translate="label">
-        <label>Simple Products</label>	
+        <label>Simple Products</label>
         <reference name="vendor.dashboard.wrapper">
             <block type="csmarketplace/vproducts" name="csmarketplace_vendor_products" translate="label" template="csmarketplace/vproducts/type.phtml">
             </block>
         </reference>
     </csmarketplace_vproducts_type>
-    
+
      <!--
 	Vendor simple product edit page layout
-	--> 
+	-->
 	<csmarketplace_vproducts_simple translate="label">
-        <label>Simple Product</label>	
+        <label>Simple Product</label>
         <reference name="vendor.dashboard.wrapper">
             <block type="csmarketplace/vproducts_edit" name="csmarketplace_vendor_products" translate="label" template="csmarketplace/vproducts/edit.phtml">
             	<block type="csmarketplace/vproducts_edit_websites" name="csmarketplace_vendor_products_website" as="website"/>
@@ -400,9 +400,9 @@ Supported layout update handles (special):
     </csmarketplace_vproducts_simple>
      <!--
 	Vendor virtual product edit page layout
-	--> 
+	-->
     <csmarketplace_vproducts_virtual translate="label">
-        <label>Virtual Product</label>	
+        <label>Virtual Product</label>
         <reference name="vendor.dashboard.wrapper">
             <block type="csmarketplace/vproducts_edit" name="csmarketplace_vendor_products" translate="label" template="csmarketplace/vproducts/edit.phtml">
             	<block type="csmarketplace/vproducts_edit_websites" name="csmarketplace_vendor_products_website" as="website" translate="label"/>
@@ -411,12 +411,12 @@ Supported layout update handles (special):
             </block>
         </reference>
     </csmarketplace_vproducts_virtual>
-    
+
     <!--
 	Vendor downloadable product edit page layout
-	--> 
+	-->
     <csmarketplace_vproducts_downloadable translate="label">
-        <label>Downloadable Product</label>	
+        <label>Downloadable Product</label>
         <reference name="vendor.dashboard.wrapper">
             <block type="csmarketplace/vproducts_edit" name="csmarketplace_vendor_products" translate="label" template="csmarketplace/vproducts/edit.phtml">
             	<block type="csmarketplace/vproducts_edit_websites" name="csmarketplace_vendor_products_website" as="website" translate="label" />
@@ -429,10 +429,10 @@ Supported layout update handles (special):
             </block>
         </reference>
     </csmarketplace_vproducts_downloadable>
-    
+
 	<!--
 	Vendor product edit page layout
-	--> 
+	-->
     <csmarketplace_vproducts_edit translate="label">
         <label>Dashboard</label>
         <update handle="csmarketplace_vendor"/>
@@ -445,10 +445,10 @@ Supported layout update handles (special):
 			 <action method="addCss"><stylesheet>css/ced/csmarketplace/vproducts.css</stylesheet></action>
 		</reference>
     </csmarketplace_vproducts_edit>
-  
+
 	<!--
 	Vendor Orders list page layout
-	--> 
+	-->
     <csmarketplace_vorders_index translate="label">
         <label>Orders List</label>
         <update handle="csmarketplace_vendor"/>
@@ -467,19 +467,19 @@ Supported layout update handles (special):
             <block type="csmarketplace/vorders_list" name="csmarketplace_vendor_orders" template="csmarketplace/vorders/list.phtml"/>
         </reference>
     </csmarketplace_vorders_index>
-    
+
     <!--
 	Vendor Orders filter list page layout
-	--> 
-    <csmarketplace_vorders_filter translate="label"> 
+	-->
+    <csmarketplace_vorders_filter translate="label">
          <block type="core/text_list" name="root" output="toHtml">
          	<block type="csmarketplace/vorders_list" name="csmarketplace_vendor_orders" template="csmarketplace/vorders/list.phtml"/>
         </block>
     </csmarketplace_vorders_filter>
-    
+
 	<!--
 	Vendor Order View page layout
-	--> 
+	-->
 	<csmarketplace_vorders_view translate="label">
         <label>Vendor Order View</label>
         <update handle="csmarketplace_vendor"/>
@@ -515,10 +515,10 @@ Supported layout update handles (special):
             <label>Additional Product Info</label>
         </block>
     </csmarketplace_vorders_view>
-    
+
     <!--
 	Vendor Order Print page layout
-	--> 
+	-->
      <csmarketplace_vorders_print translate="label">
         <label>Sales Order Print View</label>
         <reference name="content">
@@ -550,10 +550,10 @@ Supported layout update handles (special):
             <label>Additional Product Info</label>
         </block>
     </csmarketplace_vorders_print>
-	
+
 	<!--
 	Vendor payments list page layout
-	--> 
+	-->
     <csmarketplace_vpayments_index translate="label">
         <label>Commisions List</label>
         <update handle="csmarketplace_vendor"/>
@@ -568,31 +568,31 @@ Supported layout update handles (special):
         <reference name="root">
             <action method="setTemplate"><template>page/vendorpanel.phtml</template></action>
         </reference>
-		
+
         <reference name="vendor.dashboard.wrapper">
         	<block type="csmarketplace/vpayments_stats" name="csmarketplace_vendor_payments_stats" template="csmarketplace/vpayments/stats.phtml"/>
             <block type="csmarketplace/vpayments_list" name="csmarketplace_vendor_payments" template="csmarketplace/vpayments/list.phtml"/>
         </reference>
     </csmarketplace_vpayments_index>
-	
-	
-	
+
+
+
 	<!--
 	Vendor payments filter list page layout
-	--> 
+	-->
     <csmarketplace_vpayments_filter translate="label">
-    
+
          <block type="core/text_list" name="root" output="toHtml">
          	<block type="csmarketplace/vpayments_stats" name="csmarketplace_vendor_payments_stats" template="csmarketplace/vpayments/stats.phtml"/>
             <block type="csmarketplace/vpayments_list" name="csmarketplace_vendor_payments" template="csmarketplace/vpayments/list.phtml"/>
         </block>
     </csmarketplace_vpayments_filter>
-	
-	
-	
+
+
+
 	<!--
 	Vendor Payment View page layout
-	--> 
+	-->
 	<csmarketplace_vpayments_view translate="label">
         <label>Payment Details</label>
         <update handle="csmarketplace_vendor"/>
@@ -600,11 +600,11 @@ Supported layout update handles (special):
             <block type="csmarketplace/vpayments_view" name="csmarketplace_vendor_payment_view" translate="label" template="csmarketplace/vpayments/view.phtml">
             </block>
         </reference>
-    </csmarketplace_vpayments_view>	
-	
+    </csmarketplace_vpayments_view>
+
 	<!--
 		Vendor Setting page layout
-	--> 
+	-->
 
 	<csmarketplace_vsettings_index translate="label">
         <label>Profile</label>
@@ -613,17 +613,17 @@ Supported layout update handles (special):
         <reference name="root">
             <action method="setTemplate"><template>page/vendorpanel.phtml</template></action>
         </reference>
-		
+
         <reference name="vendor.dashboard.wrapper">
             <block type="csmarketplace/vsettings_payment" name="vsettings.payment" template="csmarketplace/vsettings/settings.phtml">
 				<block type="csmarketplace/vsettings_payment_methods" name="vsettings.method" as="vsettings_payment_methods" template="csmarketplace/vsettings/payment/methods.phtml"/>
 			</block>
         </reference>
     </csmarketplace_vsettings_index>
-    
+
     <!--
 	Vendor Order Reports list page layout
-	--> 
+	-->
     <csmarketplace_vreports_vorders translate="label">
         <label>Reports</label>
         <update handle="csmarketplace_vendor"/>
@@ -638,7 +638,7 @@ Supported layout update handles (special):
         <reference name="root">
             <action method="setTemplate"><template>page/vendorpanel.phtml</template></action>
         </reference>
-		
+
         <reference name="vendor.dashboard.wrapper">
             <block type="core/template" name="csmarketplace_vendor_vorders_reports_view" as="vorders_reports_view" template="csmarketplace/vreports/vorders/view.phtml">
             	<block type="core/template" name="csmarketplace_vendor_vorders_reports_filter" as="vorders_reports_filter" template="csmarketplace/vreports/vorders/filter.phtml"/>
@@ -646,10 +646,10 @@ Supported layout update handles (special):
             </block>
         </reference>
     </csmarketplace_vreports_vorders>
-    
+
     <!--
 	Vendor Product Reports list  page layout
-	--> 
+	-->
     <csmarketplace_vreports_vproducts translate="label">
         <label>Reports</label>
         <update handle="csmarketplace_vendor"/>
@@ -664,7 +664,7 @@ Supported layout update handles (special):
         <reference name="root">
             <action method="setTemplate"><template>page/vendorpanel.phtml</template></action>
         </reference>
-		
+
         <reference name="vendor.dashboard.wrapper">
             <block type="core/template" name="csmarketplace_vendor_vproducts_reports_view" as="vproducts_reports_view" template="csmarketplace/vreports/vproducts/view.phtml">
             	<block type="core/template" name="csmarketplace_vendor_vproducts_reports_filter" as="vproducts_reports_filter" template="csmarketplace/vreports/vproducts/filter.phtml"/>
@@ -672,12 +672,12 @@ Supported layout update handles (special):
             </block>
         </reference>
     </csmarketplace_vreports_vproducts>
-    
+
     <!--
 	Vendor Product Reports filter list page layout
-	--> 
+	-->
     <csmarketplace_vreports_filtervproducts translate="label">
-    
+
          <block type="core/text_list" name="root" output="toHtml">
             <block type="core/template" name="csmarketplace_vendor_vproducts_reports_view" as="vproducts_reports_view" template="csmarketplace/vreports/vproducts/view.phtml">
             	<block type="core/template" name="csmarketplace_vendor_vproducts_reports_filter" as="vproducts_reports_filter" template="csmarketplace/vreports/vproducts/filter.phtml"/>
@@ -685,23 +685,23 @@ Supported layout update handles (special):
             </block>
         </block>
     </csmarketplace_vreports_filtervproducts>
-    
+
     <!--
 	Vendor Order Reports filter list page layout
-	--> 
+	-->
     <csmarketplace_vreports_filtervorders translate="label">
          <block type="core/text_list" name="root" output="toHtml">
          	<block type="core/template" name="csmarketplace_vendor_vorders_reports_view" as="vorders_reports_view" template="csmarketplace/vreports/vorders/view.phtml">
             	<block type="core/template" name="csmarketplace_vendor_vorders_reports_filter" as="vorders_reports_filter" template="csmarketplace/vreports/vorders/filter.phtml"/>
             	<block type="csmarketplace/vreports_vorders_list" name="csmarketplace_vendor_vorders_reports_list" as="vorders_reports_list" template="csmarketplace/vreports/vorders/list.phtml"/>
-            </block>          
+            </block>
         </block>
     </csmarketplace_vreports_filtervorders>
-    
-    
+
+
      <!--
 	Vendor Sales Email Item layout
-	--> 
+	-->
     <vendor_sales_email_order_items>
     	<!-- <update handle="sales_email_order_items" /> -->
     	 <block type="sales/order_email_items" name="items" template="csmarketplace/vorders/mail/items.phtml">
@@ -716,10 +716,10 @@ Supported layout update handles (special):
             <block type="csmarketplace/vorders_view_totals" name="earn" template="csmarketplace/vorders/mail/totals/earn.phtml" />
     	</block>
     </vendor_sales_email_order_items>
-    
+
      <!--
 	Vendor Description on Order View
-	--> 
+	-->
     <sales_order_view translate="label">
    		<reference name="order_items">
                     <action method="addItemRender"><type>default</type><block>sales/order_item_renderer_default</block><template>csmarketplace/sales/order/items/renderer/default.phtml</template></action>
@@ -727,12 +727,12 @@ Supported layout update handles (special):
                     <action method="addItemRender"><type>downloadable</type><block>downloadable/sales_order_item_renderer_downloadable</block><template>csmarketplace/sales/order/items/renderer/dwldble.phtml</template></action>
         </reference>
     </sales_order_view>
-	
-	
-	
+
+
+
 	<!--
 	Vendor Debug page layout
-	--> 
+	-->
     <csmarketplace_vdebug_index translate="label">
         <reference name="root">
             <action method="setTemplate"><template>page/vendorpanel.phtml</template></action>
@@ -742,5 +742,5 @@ Supported layout update handles (special):
         	<block type="csmarketplace/vdebug_index" name="activity" template="csmarketplace/vdebug/index.phtml"/>
         </reference>
     </csmarketplace_vdebug_index>
-	
+
 </layout>

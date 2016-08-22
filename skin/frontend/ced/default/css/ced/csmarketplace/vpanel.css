@@ -299,6 +299,7 @@ nav.navbar-default.navbar-static-top{
 
 .side-menu li a  {
     color: #424242 !important;
+		text-align: right;
 }
 
 .nav > li > a:focus, .nav > li > a:hover {
