@@ -530,6 +530,29 @@ dd.odd ol li {
     font-family: 'Roboto', sans-serif !important;
 }
 
+div.block-content dl#narrow-by-list dd ol span.price {
+    font-weight:100 !important;
+    font-size:15px !important;
+    float:none !important;
+    padding-right:0px !important;
+}
+
+div.block-content dl#narrow-by-list dt {
+    color: #7b777b;
+    font-weight: 100 !important;
+    font-family: 'Roboto', sans-serif !important;
+    padding-left: 29px !important;
+    margin-bottom: 8px;
+    background-image: url(http://zupply.me/media/wysiwyg/tienda/cate-comprarpor.png) !important;
+    background-size: 6% !important;
+    background-repeat: no-repeat !important;
+    background-position: 7px 3px !important;
+}
+
+div.block-content dl#narrow-by-list dd ol li a {
+    color:gray !important;
+}
+
 /* FICHA DE PRODUCTO */
 
 .col-main .product-essential-wrapper .product-shop .panel h2 {
