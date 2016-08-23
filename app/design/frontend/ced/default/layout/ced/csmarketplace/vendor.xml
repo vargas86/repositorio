@@ -199,7 +199,7 @@ Supported layout update handles (special):
 						<name>product_reports</name>
 						<path>csmarketplace/vreports/vproducts</path>
 						<label>Reporte de productos</label>
-						<font_awesome>fa fa-angle-double-right</font_awesome>
+						<!--font_awesome>fa fa-angle-double-right</font_awesome-->
 						<sort_order>20</sort_order>
 					</product_reports>
 				</children>
@@ -208,14 +208,14 @@ Supported layout update handles (special):
 					<name>vendor_settings</name>
 					<path>csmarketplace/vsettings</path>
 					<label>Settings</label>
-					<font_awesome>fa fa-cog fa-fw</font_awesome>
+					<!--font_awesome>fa fa-cog fa-fw</font_awesome-->
 					<sort_order>80</sort_order>
 					<children>
 						<vendor_payment_settings>
 							<name>vendor_payment_settings</name>
 							<path>csmarketplace/vsettings/index</path>
 							<label>Transacciones</label>
-							<font_awesome>fa fa-money</font_awesome>
+							<!--font_awesome>fa fa-money</font_awesome-->
 							<sort_order>10</sort_order>
 						</vendor_payment_settings>
 					</children>

@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 /**
  * CedCommerce
@@ -16,7 +16,7 @@
  * @copyright   Copyright CEDCOMMERCE (http://cedcommerce.com/)
  * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  */
- 
+
 ?>
 <?php
 	$pendingAmount = $this->getPendingAmount();
@@ -26,7 +26,8 @@
 ?>
 <?php $helper=Mage::helper('csmarketplace');?>
 
-<!-- Total Pending Amount --> 
+<!-- Total Pending Amount -->
+<a href="<?php echo $pendingAmount['action']; ?>">
 <div class="col-lg-3 col-md-6">
 	<div class="panel panel-red">
 		<div class="panel-heading">
@@ -40,7 +41,7 @@
 				</div>
 			</div>
 		</div>
-		<a href="<?php echo $pendingAmount['action']; ?>">
+
 			<div class="panel-footer">
 				<span class="pull-left"><?php echo $helper->__('See more...') ?></span>
 				<span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -74,7 +75,7 @@
 	</div>
 </div>
 
-<!-- Total Orders Placed -->	
+<!-- Total Orders Placed -->
 <div class="col-lg-3 col-md-6">
 	<div class="panel panel-yellow">
 		<div class="panel-heading">
@@ -96,7 +97,7 @@
 			</div>
 		</a>
 	</div>
-</div>    
+</div>
 
 <!-- Total Products Sold -->
 <div class="col-lg-3 col-md-6">
